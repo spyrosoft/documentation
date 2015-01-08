@@ -1,0 +1,181 @@
+-- Navigation --
+Page Down
+C-v
+
+Page Up
+M-v
+
+Move to top/bottom of buffer
+M-< / M->
+
+Return to Previous Mark
+C-x C-x
+C-u C-<SPACE>
+
+Go to line
+M-g g
+
+Move page text to middle/top/bottom
+C-l
+
+Move point to middle/top/bottom
+M-r
+
+Set horizontal column navigation jump (semipermanent goal column)
+C-x C-n
+
+Remove semipermanent goal column
+C-u C-x C-n
+
+
+-- Marks and Regions --
+Set a mark
+C-space
+
+Deactivate mark/region
+C-g
+
+Shift selection
+S-<ARROW KEY>
+
+Mark word forwards
+M-@
+
+Set mark at the end of the following balanced expression
+C-M-@
+
+Set region around current paragraph
+M-h
+
+Set region around entire buffer
+C-x h
+
+Indent region
+C-x <TAB>
+
+
+-- Clipboard --
+Cut all text between pointer and mark
+C-w
+
+Kill to beginning of line
+M-0 C-k
+
+Kill backward to the beginning of the previous word
+M-<DEL>
+
+Kill forward to the end of the next word
+M-d
+
+Add region to kill ring, but don't delete it
+M-w
+
+
+-- Search and Replace --
+Search
+C-s
+
+Reverse Search
+C-r
+
+Search and Replace
+M-%
+
+
+-- Undo/Redo --
+Undo
+C-/
+
+Undo changes within region
+C-u C-/
+
+
+-- Macros --
+Execute a command multiple times
+C-u command
+
+Execute the same keystroke multiple times (for example add 40 dashes)
+M-4 0 -
+
+Start Recording Macro
+f3
+C-x (
+
+Stop Recording Macro
+f4
+C-x )
+
+Play Macro
+f4
+C-x e
+
+Play Macro Until No More
+C-u 0 C-x e
+
+
+-- Windows/Buffers --
+Clear all buffers but this one
+C-x 0
+
+Close a Buffer
+C-x k
+
+Switch to a Buffer
+C-x b
+
+
+-- Minibuffers --
+Scroll the content (such as in the help context)
+C-M-v
+M-<PageUp>/<M-PageDown>
+
+Enter a minibuffer to navigate through the items with the arrow keys
+M-v
+
+
+-- Editing --
+Insert Unicode Character
+C-x 8 <RET> NAME OF UNICODE CHARACTER (autocompletes) <RET>
+
+Insert newline on the next line and keep point where it is
+C-o
+
+Newline without indentation
+C-j
+
+Remove all bot one of many consecutive newlines
+C-x C-o
+
+
+-- Case Conversion --
+Convert region to Lower Case
+C-x C-l
+
+Convert region to Upper Case
+C-x C-u
+
+
+-- Files and Directories --
+Open a file
+C-x C-f file-name <RET>
+
+Save a file
+C-x C-s
+
+
+-- Lisp --
+Execute lisp and display the result in the echo area
+M-:
+
+
+-- HELP --
+Find in help something that matches a keyword
+C-h a
+
+Find in help what a specific key sequence does
+C-h k
+
+Search for variables whose values match the specified pattern
+M-x apropos-value
+
+

@@ -1,0 +1,5 @@
+Display information about where to get packages not included in emacs
+C-h C-e
+
+Display the installed packages. See manual for more.
+C-h p

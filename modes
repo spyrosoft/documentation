@@ -1,0 +1,6 @@
+-- Minor Modes --
+Wrap lines by word rather than at the very edge of the page
+visual-line-mode
+
+
+-- Major Modes --

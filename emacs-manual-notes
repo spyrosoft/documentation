@@ -1,0 +1,36 @@
+Open Help
+C-h <ENTER>
+
+Open Help Help
+C-h <ENTER> h
+
+Open elisp Help
+C-h C-f m Getting help <RET> m Emacs Lisp documentation <RET> f Emacs Lisp
+
+Index
+i
+
+Directory
+d
+
+== Navigation ==
+Next Node
+n
+
+Previous Node
+p
+
+Return to Last Node
+l
+
+Visit Inline Link
+f Name of Link
+
+Visit Menu Item
+M Capital Letter, <TAB>
+
+Redo Node Navigation
+r
+
+Node History
+L
