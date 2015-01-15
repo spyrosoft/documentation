@@ -9,8 +9,7 @@ Move to top/bottom of buffer
 M-< / M->
 
 Return to Previous Mark
-C-x C-x
-C-u C-<SPACE>
+C-u C-<SPC>
 
 Go to line
 M-g g
@@ -30,7 +29,13 @@ C-u C-x C-n
 
 -- Marks and Regions --
 Set a mark
-C-space
+C-<SPC>
+
+Jump to current mark
+C-u C-<SPC>
+
+Swap mark and point
+C-x C-x
 
 Deactivate mark/region
 C-g
@@ -69,6 +74,15 @@ M-d
 
 Add region to kill ring, but don't delete it
 M-w
+
+Kill through the next occurrence of a character
+M-z CHAR
+
+After yanking, cycle through the kill ring the text just pasted
+M-y
+
+Append the next kill command to the previous one
+C-M-w
 
 
 -- Search and Replace --
@@ -123,6 +137,15 @@ C-x k
 Switch to a Buffer
 C-x b
 
+Split vertically
+C-x 3
+
+Split horizontally
+C-x 2
+
+Switch to a split
+C-x o
+
 
 -- Minibuffers --
 Scroll the content (such as in the help context)
@@ -143,8 +166,17 @@ C-o
 Newline without indentation
 C-j
 
-Remove all bot one of many consecutive newlines
+Remove all but one of many consecutive newlines
 C-x C-o
+
+Remove all whitespace around point and replace it with a single space
+M-<SPC>
+
+Remove all whitespace around point
+M-\
+
+Join current line with previous line excluding tabulation and newline
+M-^
 
 
 -- Case Conversion --

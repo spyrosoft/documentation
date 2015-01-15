@@ -1,0 +1,16 @@
+-- Tasks --
+Mark task as done
+C-c C-t
+
+Move tasks around
+M-<UP/DOWN ARROW>
+M-S-<UP/DOWN ARROW>
+
+Promote or demote task
+M-<LEFT/RIGHT ARROW>
+M-S-<LEFT/RIGHT ARROW>
+
+View all open tasks
+C-c a t
+
+remember.el by John Wiegley - capture tool for adding a note/task without interrupting current task
