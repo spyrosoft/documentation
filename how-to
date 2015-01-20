@@ -1,3 +1,11 @@
-Delete up to x character
-Repeat the same text input/deletion
-Highlight matching delimiter
+How to prevent emacs from adding newlines at the end of files
+Jump point up to the first ocurrance of _ character
+Repeat the same text input/deletion (like . in vim)
+Highlight/jump to paired delimiter
+Are registers permanent?
+How does scroll-conservatively work?
+
+Does cua-mode Inhibit any commands? (set the variable `cua-enable-cua-keys' to `nil')
+
+What commands does C-u affect?
+What major/minor modes did I miss?

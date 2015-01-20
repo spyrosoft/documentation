@@ -2,5 +2,10 @@
 Wrap lines by word rather than at the very edge of the page
 visual-line-mode
 
+Visit multiple places in two files - scrolling stays the same in both
+follow-mode
+
 
 -- Major Modes --
+Read-only mode for documents - <SPC> to scroll window down & <DEL> to scroll up
+view-mode

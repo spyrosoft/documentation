@@ -1,0 +1,5 @@
+14.2 Recentering
+C-M-l should be C-S-l
+
+14.16 Useless Whitespace
+`show-trailing-whitespace' set to `t' does not display newlines at end of file

@@ -17,6 +17,9 @@ M-g g
 Move page text to middle/top/bottom
 C-l
 
+Move page text heuristically around - similar to C-l
+C-S-l
+
 Move point to middle/top/bottom
 M-r
 
@@ -40,6 +43,9 @@ C-x C-x
 Deactivate mark/region
 C-g
 
+Set global mark
+C-S-<SPC>
+
 Shift selection
 S-<ARROW KEY>
 
@@ -57,6 +63,35 @@ C-x h
 
 Indent region
 C-x <TAB>
+
+
+-- Rectangle Regions --
+Set a rectangle mark
+C-x <SPC>
+
+Kill the rectangle
+C-x r k
+
+Copy but don't delete the rectangle
+C-x r M-w
+
+Delete the rectangle but don't copy it
+C-x r d
+
+Yank the last killed rectangle in the current position of point
+C-x r y
+
+Use the current rectangle's dimensions to insert spaces to the left of the rectangle (for example, to insert spaces at the beginning of a line of code) (`open-rectangle')
+C-x r o
+
+Replace the contents of the rectangle with spaces
+C-x r c
+
+Insert numbered list numbers to the left of the selected rectangle - use C-u for styling & start #
+C-x r N
+
+Replace contents of rectangle with the specified string on each line
+C-x r t STRING <RET>
 
 
 -- Clipboard --
@@ -85,6 +120,63 @@ Append the next kill command to the previous one
 C-M-w
 
 
+-- Registers --
+Store position of point and current buffer in register R (R is any character or number)
+C-x r <SPC> R
+
+Jump to register R
+C-x r j R
+
+Copy region into register R (C-u to also delete the region)
+C-x r s R
+
+Copy the region-rectangle into register R (C-u to also delete rectangle)
+C-x r r R
+
+Insert content from register R (C-u to place point after inserted text and mark at beginning)
+C-x r i R
+
+Append or prepend contents of region to register R
+M-x append-to-register <RET> R
+M-x prepend-to-register <RET> R
+
+Save the state of all windows in the current frame to register R
+C-x r w R
+
+Save the state of all windows and frames to register R
+C-x r f R
+
+Restore window/frame configuration from register R (Same as jump to stored cursor position) (C-u to delete existing frames/windows)
+C-x r j R
+
+Store a number into register R (Used for incrementing numbers during macro execution) (NUMBER is optional - defaults to 0)
+C-u NUMBER C-x r n R
+
+Increment the contents of register R by NUMBER amount (NUMBER is optional - defaults to 1)
+C-u NUMBER C-x r + R
+
+
+-- Bookmarks --
+Add bookmark named current filename
+C-x r m <RET>
+
+List all bookmarks
+C-x r l
+
+Jump to the bookmark named BOOKMARK
+C-x r b BOOKMARK <RET>
+
+Review bookmark commands
+C-x r l C-h m
+
+Saves current position of all default bookmarks (Needed if opening a different emacs session)
+M-x bookmark-save
+
+Save and load context specific bookmark files
+M-x bookmark write <RET> FILENAME <RET>
+M-x bookmark load <RET> FILENAME <RET>
+
+
 -- Search and Replace --
 Search
 C-s
@@ -92,8 +184,14 @@ C-s
 Reverse Search
 C-r
 
-Search and Replace
+Search and Replace (C-u to go backwards)
 M-%
+
+Edit current search term
+M-e
+
+Search for a newline
+C-j
 
 
 -- Undo/Redo --
@@ -126,6 +224,12 @@ C-x e
 Play Macro Until No More
 C-u 0 C-x e
 
+Store macro in register R
+C-x C-k x R
+
+Execute macro stored in register R (Same as jump to position)
+C-x r j R
+
 
 -- Windows/Buffers --
 Clear all buffers but this one
@@ -156,14 +260,34 @@ Enter a minibuffer to navigate through the items with the arrow keys
 M-v
 
 
+-- Narrowing --
+Narrow down to content between point and mark
+C-x n n
+
+Widen to entire buffer again
+C-x n w
+
+Narrow down to current page
+C-x n p
+
+Narrow down to current defun
+C-x n d
+
+
 -- Editing --
 Insert Unicode Character
 C-x 8 <RET> NAME OF UNICODE CHARACTER (autocompletes) <RET>
 
+Swap two surrounding characters and move forward one
+C-t
+
+Swap two surrounding words and move forward one
+M-t
+
 Insert newline on the next line and keep point where it is
 C-o
 
-Newline without indentation
+Insert newline without indentation
 C-j
 
 Remove all but one of many consecutive newlines
@@ -195,6 +319,21 @@ Save a file
 C-x C-s
 
 
+-- Highlighting --
+Highlight all instances of current word
+M-s h .
+
+Unhighlight all instances of regex (defaults to most recent regex - M-n & M-p to cycle)
+M-s h u REGEX <RET>
+
+Cycle through highlight faces
+M-n
+M-p
+
+Highlight entire line containing matching regex
+M-s h l REGEX <RET> FACE <RET>
+
+
 -- Lisp --
 Execute lisp and display the result in the echo area
 M-:
@@ -211,3 +350,6 @@ Search for variables whose values match the specified pattern
 M-x apropos-value
 
 
+-- Misc --
+Display the system time
+M-x display-time
