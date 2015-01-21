@@ -179,7 +179,7 @@ M-x bookmark load <RET> FILENAME <RET>
 
 -- Search and Replace --
 Search
-C-s
+C-s (also search again for the last serch term - regex included)
 
 Reverse Search
 C-r
@@ -187,11 +187,46 @@ C-r
 Search and Replace (C-u to go backwards)
 M-%
 
-Edit current search term
+Edit current search term (M-f when finished)
 M-e
+
+Regex search
+C-M-s
+C-M-r
+
+Cycle through previous searches
+M-n
+M-p
+
+Find all instances of a search and list them by lines (visit line with <RET> - press e to edit lines & C-c C-c to return again)
+M-s o
+M-x occur
+M-x multi-occur (for multiple buffers)
+
+Count the occurances of a regex
+M-x how-many
 
 Search for a newline
 C-j
+
+Append the word following point to the current search
+C-w
+
+Append the rest of the line following point to the current search (converts to lower to remain case insensitive)
+M-s C-e
+
+Search for variable or function name (also works after entering incremental search & toggles)
+M-s _
+
+Search for variable or function name at point
+M-s .
+
+Search for words ignoring spaces and punctuation
+M-s w
+
+Delete lines which match regex
+M-x flush-lines
+M-x keep-lines (the opposite)
 
 
 -- Undo/Redo --
@@ -278,11 +313,14 @@ C-x n d
 Insert Unicode Character
 C-x 8 <RET> NAME OF UNICODE CHARACTER (autocompletes) <RET>
 
-Swap two surrounding characters and move forward one
-C-t
+Swap two lines
+C-x C-t
 
 Swap two surrounding words and move forward one
 M-t
+
+Swap two surrounding characters and move forward one
+C-t
 
 Insert newline on the next line and keep point where it is
 C-o

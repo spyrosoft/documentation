@@ -1,6 +1,7 @@
 How to prevent emacs from adding newlines at the end of files
 Jump point up to the first ocurrance of _ character
 Repeat the same text input/deletion (like . in vim)
+Stop emacs from making #filename# files
 Highlight/jump to paired delimiter
 Are registers permanent?
 How does scroll-conservatively work?
