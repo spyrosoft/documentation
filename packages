@@ -3,3 +3,5 @@ C-h C-e
 
 Display the installed packages. See manual for more.
 C-h p
+
+remember.el by John Wiegley - capture tool for adding a note/task without interrupting current task in org
