@@ -254,16 +254,69 @@
 
 ** Play Macro
    f4
-   C-x e
+   C-x e (during macro definition, this exits the definition and executes it immediately - subsequent e strokes each execute the macro again)
 
 ** Play Macro Until No More
    C-u 0 C-x e
+
+** Execute macro and append additional keystrokes
+   C-u f3
+
+** Do not execute macro - only append additional keystrokes
+   C-u C-u f3
+
+** Edit the last defined macro
+   C-x C-k C-e
+
+** Cycle to next defined macro in ring (chains with the next two commands)
+   C-x C-k C-n
+
+** Cycle to previous defined macro in ring (chains)
+   C-x C-k C-p
+
+** Execute current head of the defined macro ring (Chains with the previous two commands)
+   C-x C-k C-k
+
+** Name the head of the macro ring
+   C-x C-k n
+
+** Edit a previously named/command-assigned macro
+   C-x C-k e NAME <RET>
+   C-x C-k e COMMAND
+
+** Assign most recently defined macro a meta command
+   C-x C-k n
+
+** Assign most recently defined macro control command
+   C-x C-k b (recommended C-x C-k [0-9A-Z]
+
+** Insert macro counter into buffer and increment
+   C-x C-k C-i
+   f3 (while recording)
+
+** Set macro counter
+   C-x C-k C-c
+
+** Specify format for inserting the macro counter
+   C-x C-k C-f
+
+** Add arbitrary number to the macro counter
+   C-u # C-x C-k C-a (C-u value is optional - if blank the last macro counter inserted is substituted)
+
+** At any point during the recording of a macro, set a breakpoint
+   C-x q (upon execution, C-r enters recursive editing - resume with C-M-c) (C-u enters recursive ediding during the recording process as well)
+
+** Execute macro on all lines in a region
+   C-x C-k r
 
 ** Store macro in register R
    C-x C-k x R
 
 ** Execute macro stored in register R (Same as jump to position)
    C-x r j R
+
+** Save macro to file (and M-x load-file later)
+   M-x insert-kbd-macro <RET> MACRONAME <RET>
 
 
 * Windows/Buffers
@@ -347,6 +400,15 @@
 
 ** Convert region to Upper Case
    C-x C-u
+
+** Convert last word to capital
+   M-- M-c
+
+** Convert last word to Lower Case
+   M-- M-l
+
+** Convert last word to Upper Case
+   M-- M-u
 
 
 * Files and Directories
