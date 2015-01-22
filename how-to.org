@@ -1,16 +1,19 @@
 * Questions
-** Reset emacs modes to default
-** Change the gui theme
-** Jump point up to the first ocurrance of _ character
 ** Repeat the same text input/deletion (like . in vim)
-** Stop emacs from making #filename# files
-** Highlight/jump to paired delimiter
+
 ** Yank and keep point where it is
+
 ** Increment and decrement number at point
+   http://www.emacswiki.org/emacs/IncrementNumber
+
 ** What is the pattern of M & C strokes
+
 ** Are registers permanent?
+
 ** Error: No word lists can be found for the language "en_US". M-$
-** Look up the definition of the word at point
+
+** Look up the English definition of the word at point
+
 ** How does scroll-conservatively work?
 
 ** Does cua-mode Inhibit any commands? (set the variable `cua-enable-cua-keys' to `nil')
@@ -18,9 +21,28 @@
 * Todo
 
 ** What commands does C-u affect?
+
 ** What major/minor modes did I miss?
 
 * Answers
+** Change the gui theme
+   There is a solarized theme on github, but it looks like a lot of work
+
 ** How to prevent emacs from adding newlines at the end of files?
    It doesn't, other than the .emacs files when appending lines
 
+** Jump point up to the first ocurrance of _ character
+
+   C-s CHAR then navigation or deletion command
+
+** Stop emacs from making #filename# files
+
+   (setq make-backup-files nil)
+   (setq auto-save-default nil)
+
+** Highlight/jump to paired delimiter
+   C-M-n
+   C-M-p
+
+* Give Up
+** Reset emacs modes to default

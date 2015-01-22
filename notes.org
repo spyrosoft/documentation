@@ -23,6 +23,10 @@
 ** Move point to middle/top/bottom
    M-r
 
+** Jump to matching delimiter
+   C-M-n
+   C-M-p
+
 ** Set horizontal column navigation jump (semipermanent goal column)
    C-x C-n
 
