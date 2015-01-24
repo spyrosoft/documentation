@@ -12,3 +12,6 @@
 
 ** View all open tasks
    C-c a t
+
+* Misc
+** Org has tons of commands - see C-h m in org mode for a list

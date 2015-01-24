@@ -1,0 +1,7 @@
+* Shell Options
+** There is a way to autocomplete file names using shell autocompletion - look under Shell in the manual directory.
+
+* Variables
+** completion-ignored-extensions
+   Do not display the specified extensions in the completion minibuffer
+

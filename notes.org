@@ -1,4 +1,5 @@
 * Navigation
+
 ** Page Down
    C-v
 
@@ -27,6 +28,18 @@
    C-M-n
    C-M-p
 
+** Forward one sentence
+   M-e
+
+** Backward one sentence
+   M-a
+
+** Forward one paragraph (or element)
+   M-}
+
+** Backward one paragraph (or element)
+   M-{
+
 ** Set horizontal column navigation jump (semipermanent goal column)
    C-x C-n
 
@@ -35,6 +48,7 @@
 
 
 * Marks and Regions
+
 ** Set a mark
    C-<SPC>
 
@@ -182,6 +196,7 @@
 
 
 * Search and Replace
+
 ** Search
    C-s (also search again for the last serch term - regex included)
 
@@ -234,6 +249,7 @@
 
 
 * Undo/Redo
+
 ** Undo
    C-/
 
@@ -242,6 +258,7 @@
 
 
 * Macros
+
 ** Execute a command multiple times
    C-u command
 
@@ -271,6 +288,9 @@
 
 ** Edit the last defined macro
    C-x C-k C-e
+
+** Edit the currently selected macro step by step (There are a ton of additional command insertion and replacement commands - see manual)
+   C-x C-k <SPC>
 
 ** Cycle to next defined macro in ring (chains with the next two commands)
    C-x C-k C-n
@@ -324,6 +344,7 @@
 
 
 * Windows/Buffers
+
 ** Clear all buffers but this one
    C-x 0
 
@@ -344,6 +365,7 @@
 
 
 * Minibuffers
+
 ** Scroll the content (such as in the help context)
    C-M-v
    M-<PageUp>/<M-PageDown>
@@ -353,6 +375,7 @@
 
 
 * Narrowing
+
 ** Narrow down to content between point and mark
    C-x n n
 
@@ -367,6 +390,7 @@
 
 
 * Editing
+
 ** Insert Unicode Character
    C-x 8 <RET> NAME OF UNICODE CHARACTER (autocompletes) <RET>
 
@@ -399,6 +423,7 @@
 
 
 * Case Conversion
+
 ** Convert region to Lower Case
    C-x C-l
 
@@ -416,14 +441,31 @@
 
 
 * Files and Directories
-** Open a file
-   C-x C-f file-name <RET>
 
 ** Save a file
    C-x C-s
 
+** Open a file
+   C-x C-f
+
+** Open a directory for browsing (don't specify a file name)
+   C-x C-f
+
+** Open a file read-only
+   C-x C-r
+
+** Open an alternate file (replaces the buffer containing the file found previously)
+   C-x C-v
+
+** Open a file in another frame (in gui mode, a separate x window opens, but if you close one, the other closes)
+   C-x 5 f
+
+** Open a file and split the frame (default split horizontal/vertical)
+   C-x 4 f
+
 
 * Highlighting
+
 ** Highlight all instances of current word
    M-s h .
 
@@ -438,12 +480,26 @@
    M-s h l REGEX <RET> FACE <RET>
 
 
+* Shell Commands
+
+** Change default directory
+   M-x cd
+
+** Echo current directory
+   M-x pwd
+
+** Environment variables are available in file completion
+   /example/$NAMED/environment/variable
+
+
 * Lisp
+
 ** Execute lisp and display the result in the echo area
    M-:
 
 
 * HELP
+
 ** Find in help something that matches a keyword
    C-h a
 
@@ -455,5 +511,6 @@
 
 
 * Misc
+
 ** Display the system time
    M-x display-time
