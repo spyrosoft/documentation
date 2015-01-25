@@ -1,7 +1,21 @@
 * Shell Options
+
 ** There is a way to autocomplete file names using shell autocompletion - look under Shell in the manual directory.
 
+
 * Variables
+
 ** completion-ignored-extensions
    Do not display the specified extensions in the completion minibuffer
 
+** auto-revert-interval
+   Seconds between auto reverting
+
+
+* Hooks
+
+** find-file-not-found-functions (runs before find-file-hook)
+   Run functions in list one by one until non-`nil' value returned
+
+** find-file-hook
+   Runs each time a file is opened

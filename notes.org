@@ -421,6 +421,15 @@
 ** Join current line with previous line excluding tabulation and newline
    M-^
 
+** Diff two files
+   M-x diff
+
+** Diff buffer with contents on disk
+   M-x diff-buffer-with-file
+
+** Jump to the first instance of differing text in two windows (C-u to ignore whitespace)
+   M-x compare-windows
+
 
 * Case Conversion
 
@@ -445,23 +454,55 @@
 ** Save a file
    C-x C-s
 
+** Save all open files
+   C-x s
+
 ** Open a file
    C-x C-f
+
+** Save a file as
+   C-x C-w
+
+** Revert a buffer
+   M-x revert-buffer
 
 ** Open a directory for browsing (don't specify a file name)
    C-x C-f
 
+** Reload the file contents periodically (like unix tail command)
+   M-x auto-revert-tail-mode
+   M-x auto-revert-mode
+
+** In combination with the auto-revert-mode, a buffer will revert without asking (useful for directories)
+   M-x revert-without-query
+
 ** Open a file read-only
    C-x C-r
+
+** Make a directory
+   M-x make-directory
+
+** Delete a directory
+   M-x delete-directory
 
 ** Open an alternate file (replaces the buffer containing the file found previously)
    C-x C-v
 
+** Open a file and split the frame (default split horizontal/vertical)
+   C-x 4 f
+
 ** Open a file in another frame (in gui mode, a separate x window opens, but if you close one, the other closes)
    C-x 5 f
 
-** Open a file and split the frame (default split horizontal/vertical)
-   C-x 4 f
+** Drag and drop file into emacs
+   Opens file, or moves file to directory if in Dired
+
+** Open a file exactly the way it is - including Windows newlines or weird character encoding
+   M-x find-file-literally
+   Emacs converts files to the set default character encoding and newline type when opening a file and converts them back again upon saving.
+
+** Forget that the current buffer has been changed (opposite with C-u)
+   M-~
 
 
 * Highlighting
@@ -514,3 +555,9 @@
 
 ** Display the system time
    M-x display-time
+
+** There's a thing called file shadowing which seems to be useful for servers...?
+   C-h a shadow
+
+** Insert automatically updating timestamp into file - each time the file saves - add (time-stamp) to the `before-save-hook'.
+   Time-stamp: <> (in the first few lines of the file)

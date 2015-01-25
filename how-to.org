@@ -1,4 +1,5 @@
 * Questions
+
 ** Repeat the same text input/deletion (like . in vim)
 
 ** Yank and keep point where it is
@@ -10,6 +11,10 @@
 
 ** Are registers permanent?
 
+** What are smerge and emerge?
+
+** Execute git commands from within emacs
+
 ** Error: No word lists can be found for the language "en_US". M-$
 
 ** Look up the English definition of the word at point
@@ -18,13 +23,16 @@
 
 ** Does cua-mode Inhibit any commands? (set the variable `cua-enable-cua-keys' to `nil')
 
+
 * Todo
 
 ** What commands does C-u affect?
 
 ** What major/minor modes did I miss?
 
+
 * Answers
+
 ** Change the gui theme
    There is a solarized theme on github, but it looks like a lot of work
 
@@ -44,5 +52,10 @@
    C-M-n
    C-M-p
 
+** View the current value of a variable
+   C-h v <VARIABLE>
+
+
 * Give Up
+
 ** Reset emacs modes to default
