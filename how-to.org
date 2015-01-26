@@ -11,9 +11,11 @@
 
 ** Are registers permanent?
 
-** What are smerge and emerge?
+** What are smerge and emerge and diff mode (18.10 - Files)?
 
 ** Execute git commands from within emacs
+
+** How to use word wrapping in org mode?
 
 ** Error: No word lists can be found for the language "en_US". M-$
 
@@ -22,6 +24,8 @@
 ** How does scroll-conservatively work?
 
 ** Does cua-mode Inhibit any commands? (set the variable `cua-enable-cua-keys' to `nil')
+
+** What is burying a buffer?
 
 
 * Todo

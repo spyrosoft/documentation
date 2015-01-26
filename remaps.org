@@ -1,3 +1,5 @@
 Cycle through previous search queries (maybe other things as well, such as M-x)
 M-<TAB>
 
+Better alternative to the default C-x C-b
+M-x bs-show

@@ -343,7 +343,7 @@
    M-x insert-kbd-macro <RET> MACRONAME <RET>
 
 
-* Windows/Buffers
+* Frames/Windows/Buffers
 
 ** Clear all buffers but this one
    C-x 0
@@ -362,6 +362,49 @@
 
 ** Switch to a split
    C-x o
+
+** Toggle current buffer to read only
+   C-x C-q
+
+** Navigate to previously viewed buffer
+   C-x <LEFT>/<RIGHT>
+
+** Display all buffers
+   C-x C-b
+
+** Display all buffers of visited files
+   C-u C-x C-b
+
+** Take the current buffer and clone it to a different buffer with its own name, point, narrowing, markers, major modes, and local variables (C-u to prompt for a name for it)
+   M-x clone-indirect-buffer
+
+** Select a buffer and split into a new window (default horizontal/vertical)
+   C-x 4 b BUFFER <RET>
+
+** Select a buffer and split into a new frame (frames seem to be gui only)
+   C-x 5 b BUFFER <RET>
+
+** Delete frame
+   C-x 5 0
+
+** Add current buffer to the end of another buffer
+   M-x append-to-buffer
+
+** Insert contents of a buffer at point
+   M-x insert-buffer
+
+** Rename a buffer to make room for a new default buffer of the same type, such as `*shell*'
+   M-x rename-buffer
+   M-x rename-uniquely
+
+** Open a menu to selectively remove buffers (tons of commands in this mode - see 19.5 Buffers)
+   M-x buffer-menu
+
+** Close all open buffers which have had no changes made to them
+   M-x clean-buffer-list
+
+** Prompt to close each buffer one at a time
+   M-x kill-some-buffers
 
 
 * Minibuffers
@@ -463,11 +506,17 @@
 ** Save a file as
    C-x C-w
 
+** Quote a file name with special characters
+   /:/tmp/delete~me
+
 ** Revert a buffer
    M-x revert-buffer
 
 ** Open a directory for browsing (don't specify a file name)
    C-x C-f
+
+** Update the contents of a buffer in Dired (directory edit) mode
+   g
 
 ** Reload the file contents periodically (like unix tail command)
    M-x auto-revert-tail-mode
@@ -493,6 +542,42 @@
 
 ** Open a file in another frame (in gui mode, a separate x window opens, but if you close one, the other closes)
    C-x 5 f
+
+** Open a file by file name alone from the file name cache
+   C-x C-f FILE-NAME
+
+** Filesets
+
+*** Add a buffer to a fileset (requires filesets-init to be run first - if BUFFER-NAME doesn't exist, it is created)
+    M-x filesets-add-buffer <RET> BUFFER-NAME <RET>
+
+*** Remove buffer from a fileset
+    M-x filesets-remove-buffer
+
+*** Edit a fileset
+    M-x filesets-edit
+
+*** Open a fileset
+    M-x filesets-open
+
+*** Close all buffers in a fileset
+    M-x filesets-close
+
+*** Run a shell command on a fileset
+    M-x filesets-run-cmd
+
+*** Edit the current filesets
+    M-x filesets-edit
+
+** Add a directory to the file name cache
+   M-x file-cache-add-directory <RET> DIRECTORY <RET>
+   M-x file-cache-add-directory-using-find <RET> DIRECTORY <RET>
+
+** Add a list of directories via a Lisp variable
+   M-x file-cache-add-directory-list <RET> VARIABLE <RET>
+
+** View the current file name cache
+   M-x file-cache-display
 
 ** Drag and drop file into emacs
    Opens file, or moves file to directory if in Dired

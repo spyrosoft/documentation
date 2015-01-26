@@ -6,6 +6,9 @@
 ** Visit multiple places in two files - scrolling stays the same in both
    follow-mode
 
+** Keep track of recent files edited
+   recentf-mode
+
 
 * Major Modes
 

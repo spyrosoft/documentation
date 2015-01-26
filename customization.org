@@ -12,6 +12,12 @@
    Seconds between auto reverting
 
 
+* Functions
+
+** bs-show
+   Better than C-x C-b
+
+
 * Hooks
 
 ** find-file-not-found-functions (runs before find-file-hook)
@@ -19,3 +25,6 @@
 
 ** find-file-hook
    Runs each time a file is opened
+
+** kill-buffer-hook
+   Runs each time a buffer is killed
