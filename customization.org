@@ -11,6 +11,9 @@
 ** auto-revert-interval
    Seconds between auto reverting
 
+** mouse-autoselect-window
+   Focus follows mouse - gui mode only
+
 
 * Functions
 

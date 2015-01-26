@@ -4,5 +4,6 @@ C-M-l should be C-S-l
 14.16 Useless Whitespace
 `show-trailing-whitespace' set to `t' does not display newlines at end of file
 
-19.7.2 Fast minibuffer selection
-The command doesn't exist and only C-j seems to work
+19.7.2 Fast minibuffer selection & 19.7.2 Fast minibuffer selection
+Incomplete mode does not exist and only C-j seems to work
+

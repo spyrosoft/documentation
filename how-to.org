@@ -27,12 +27,16 @@
 
 ** What is burying a buffer?
 
+** Why isn't flyspell working?
+
 
 * Todo
 
 ** What commands does C-u affect?
 
 ** What major/minor modes did I miss?
+
+** Look through the emacs gui context menu
 
 
 * Answers
@@ -58,6 +62,13 @@
 
 ** View the current value of a variable
    C-h v <VARIABLE>
+
+** Set up default character encoding and newlines
+   C-h C
+   The default system encoding is used by default for new files - it does what you would want
+
+** See if the tab issue can be fixed by defining tab width in Terminator
+   Tabs are displayed as a certain width by using literal spaces in the terminal. The number of which can be changed by visiting `M-x describe-variable tab-width' and clicking Customize - changes go into the .emacs config file.
 
 
 * Give Up

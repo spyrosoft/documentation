@@ -9,8 +9,20 @@
 ** Keep track of recent files edited
    recentf-mode
 
+** Adds functionality to undo window configuration changes
+   winner-mode
+
+** Scroll commands affect all windows
+   scroll-all-mode
+
+** Snap indentation to perscribed indentation
+   electric-indent-mode
+
 
 * Major Modes
 
 ** Read-only mode for documents - <SPC> to scroll window down & <DEL> to scroll up
    view-mode
+
+** Enable gui mouse emulation in xterm
+   xterm-mouse-mode

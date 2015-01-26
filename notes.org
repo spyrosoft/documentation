@@ -28,6 +28,9 @@
    C-M-n
    C-M-p
 
+** Move point to first non-whitespace character in the current line
+   M-m
+
 ** Forward one sentence
    M-e
 
@@ -79,8 +82,11 @@
 ** Set region around entire buffer
    C-x h
 
-** Indent region
+** Indent region as a block (initiates transient mode - left and right arrows moves the block)
    C-x <TAB>
+
+** Simulate pressing tab on all lines in region (C-u to indent multiple times)
+   C-M-\
 
 
 * Rectangle Regions
@@ -354,20 +360,40 @@
 ** Switch to a Buffer
    C-x b
 
-** Split vertically
+** Split vertically (C-u to specify column width - negative for right column)
    C-x 3
 
-** Split horizontally
+** Split horizontally (C-u to specify number of lines - negative for upper row)
    C-x 2
 
-** Switch to a split
+** Switch to a split (C-u to move more than one - includes minibuffer)
    C-x o
-
-** Toggle current buffer to read only
-   C-x C-q
 
 ** Navigate to previously viewed buffer
    C-x <LEFT>/<RIGHT>
+
+** Delete selected window and kill its buffer
+   C-x 4 0
+
+** Resizing Windows
+
+*** Increase height (C-u with a negative argument shrinks it instead)
+    C-x ^
+
+*** Increase width
+    C-x }
+
+*** Decrease width
+    C-x {
+
+*** Make all windows the same height (`malance-windows')
+    C-x +
+
+*** Shrink this window if its buffer doesn't need so many lines
+    C-x -
+
+** Toggle current buffer to read only
+   C-x C-q
 
 ** Display all buffers
    C-x C-b
@@ -386,6 +412,12 @@
 
 ** Delete frame
    C-x 5 0
+
+** Create new frame and switch to it (in terminal mode, all buffers seem to be available from all frames - the only benefit it seems to have is arrangement of buffers)
+   C-x 5 2
+
+** Switch to a frame
+   C-x 5 o
 
 ** Add current buffer to the end of another buffer
    M-x append-to-buffer
@@ -434,9 +466,6 @@
 
 * Editing
 
-** Insert Unicode Character
-   C-x 8 <RET> NAME OF UNICODE CHARACTER (autocompletes) <RET>
-
 ** Swap two lines
    C-x C-t
 
@@ -452,6 +481,9 @@
 ** Insert newline without indentation
    C-j
 
+** Insert a literal tab character
+   C-q <TAB>
+
 ** Remove all but one of many consecutive newlines
    C-x C-o
 
@@ -463,6 +495,15 @@
 
 ** Join current line with previous line excluding tabulation and newline
    M-^
+
+** Convert all spaces to tabs
+   M-x tabify
+
+** Insert Unicode Character
+   C-x 8 <RET> NAME OF UNICODE CHARACTER (autocompletes) <RET>
+
+** Show information about character at point including cursor position and character encoding (C-u for even more information)
+   C-x =
 
 ** Diff two files
    M-x diff
@@ -590,6 +631,12 @@
    M-~
 
 
+* Modes
+
+** Display information about the current modes
+   C-h m
+
+
 * Highlighting
 
 ** Highlight all instances of current word
@@ -622,6 +669,11 @@
 
 ** Execute lisp and display the result in the echo area
    M-:
+
+
+* GUI
+
+** Skipped over this - see chapter 21
 
 
 * HELP
