@@ -1,4 +1,5 @@
 * Tasks
+
 ** Mark task as done
    C-c C-t
 
@@ -10,8 +11,44 @@
    M-<LEFT/RIGHT ARROW>
    M-S-<LEFT/RIGHT ARROW>
 
+** Add a calendar entry to a task identifying when it was added
+	 C-c C-s
+
+** Add a deadline
+	 C-c C-d
+
 ** View all open tasks
    C-c a t
 
-* Misc
-** Org has tons of commands - see C-h m in org mode for a list
+
+* Navigation
+
+** Jump to next visible heading
+	 C-c C-n
+
+** Jump to previous visible heading
+	 C-c C-p
+
+** Jump to next visible heading at same nesting level
+	 C-c C-f
+
+** Jump to previous visible heading at same nesting level
+	 C-c C-b
+
+** Jump to heading in which currently nested
+	 C-c C-u
+
+
+* Exporting
+
+** Export current org in any of a variety of formats including HTML
+	 C-c C-e
+
+
+* Agenda
+
+** File a task to the front of agenda
+	 C-c [
+
+
+# Org has tons of commands - see C-h m in org mode for a list

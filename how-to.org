@@ -11,11 +11,17 @@
 
 ** Are registers permanent?
 
+** How do you customize what delimiters to use in org mode? (See 25.8.1 Format of Outlines)
+
+** Org seems to be limited to three level deep nesting - is this true?
+
 ** What are smerge and emerge and diff mode (18.10 - Files)?
 
 ** Execute git commands from within emacs
 
 ** How to use word wrapping in org mode?
+
+** Is there an html5 mode - not just xhtml?
 
 ** Error: No word lists can be found for the language "en_US". M-$
 
@@ -28,6 +34,8 @@
 ** What is burying a buffer?
 
 ** Why isn't flyspell working?
+
+** Is there a way to automate exporting from org mode?
 
 
 * Todo

@@ -90,6 +90,7 @@
 
 
 * Rectangle Regions
+
 ** Set a rectangle mark
    C-x <SPC>
 
@@ -119,11 +120,9 @@
 
 
 * Clipboard
+
 ** Cut all text between pointer and mark
    C-w
-
-** Kill to beginning of line
-   M-0 C-k
 
 ** Kill backward to the beginning of the previous word
    M-<DEL>
@@ -134,8 +133,20 @@
 ** Add region to kill ring, but don't delete it
    M-w
 
+** Kill to end of line
+   C-k
+
+** Kill to beginning of line
+   M-0 C-k
+
 ** Kill through the next occurrence of a character
    M-z CHAR
+
+** Kill to end of sentence
+   M-k
+
+** Kill to beginning of sentence
+   C-x <DEL>
 
 ** After yanking, cycle through the kill ring the text just pasted
    M-y
@@ -145,6 +156,7 @@
 
 
 * Registers
+
 ** Store position of point and current buffer in register R (R is any character or number)
    C-x r <SPC> R
 
@@ -181,6 +193,7 @@
 
 
 * Bookmarks
+
 ** Add bookmark named current filename
    C-x r m <RET>
 
@@ -517,20 +530,29 @@
 
 * Case Conversion
 
+** Convert following word to Lower Case
+	 M-l
+
+** Convert following word to Upper Case
+	 M-u
+
+** Capitalize the following word
+	 M-c
+
+** Convert word before point to capital
+   M-- M-c
+
+** Convert word before point to Lower Case
+   M-- M-l
+
+** Convert word before point to Upper Case
+   M-- M-u
+
 ** Convert region to Lower Case
    C-x C-l
 
 ** Convert region to Upper Case
    C-x C-u
-
-** Convert last word to capital
-   M-- M-c
-
-** Convert last word to Lower Case
-   M-- M-l
-
-** Convert last word to Upper Case
-   M-- M-u
 
 
 * Files and Directories

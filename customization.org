@@ -14,6 +14,9 @@
 ** mouse-autoselect-window
    Focus follows mouse - gui mode only
 
+** outline-regexp
+	 Define characters to delimit an outline
+
 
 * Functions
 
