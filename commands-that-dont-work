@@ -7,3 +7,6 @@ C-M-l should be C-S-l
 19.7.2 Fast minibuffer selection & 19.7.2 Fast minibuffer selection
 Incomplete mode does not exist and only C-j seems to work
 
+25.14.7 Converting Between Plain Text and Tables
+Unable to replicate the table command as described
+

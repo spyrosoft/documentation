@@ -35,3 +35,6 @@
 
 ** Node History
    L
+
+** Duplicate buffer at current location
+	 M-n

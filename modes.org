@@ -3,6 +3,21 @@
 ** Wrap lines by word rather than at the very edge of the page
    visual-line-mode
 
+** Scroll commands affect all windows
+   scroll-all-mode
+
+** Snap indentation to perscribed indentation
+   electric-indent-mode
+
+** Automatically add closing delimiters (further customization can be found in 26.4.3)
+	 electric-pair-mode
+
+** Accordion functions, etc. (hideshow - see 26.7)
+	 hs-minor-mode
+
+** Enable gui mouse emulation in xterm
+   xterm-mouse-mode
+
 ** Visit multiple places in two files - scrolling stays the same in both
    follow-mode
 
@@ -12,17 +27,13 @@
 ** Adds functionality to undo window configuration changes
    winner-mode
 
-** Scroll commands affect all windows
-   scroll-all-mode
-
-** Snap indentation to perscribed indentation
-   electric-indent-mode
+** Enable camel case recognition
+	 glasses-mode
+	 subword-mode
+	 superword-mode
 
 
 * Major Modes
 
 ** Read-only mode for documents - <SPC> to scroll window down & <DEL> to scroll up
    view-mode
-
-** Enable gui mouse emulation in xterm
-   xterm-mouse-mode

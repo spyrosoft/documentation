@@ -85,7 +85,7 @@
 ** Indent region as a block (initiates transient mode - left and right arrows moves the block)
    C-x <TAB>
 
-** Simulate pressing tab on all lines in region (C-u to indent multiple times)
+** Simulate pressing tab on all lines in region, even if region is inactive (C-u to indent multiple times)
    C-M-\
 
 
@@ -659,6 +659,74 @@
    C-h m
 
 
+* Text Tables
+
+** Tables must begin in a proper table configuration - rectangular shape with + - = & | for borders
+
+** The following are examples of _invalid_ tables: (25.14.1)
+
+        +-----+       +--+    +-++--+
+        |     |       |  |    | ||  |
+        |     |       |  |    | ||  |
+        +--+  |    +--+--+    +-++--+
+        |  |  |    |  |  |    +-++--+
+        |  |  |    |  |  |    | ||  |
+        +--+--+    +--+--+    +-++--+
+           a          b          c
+
+From left to right:
+
+  a. Overlapped cells or non-rectangular cells are not allowed.
+
+  b. The border must be rectangular.
+
+  c. Cells must have a minimum width/height of one character
+
+** Create a new table from scratch
+	 M-x table-insert
+
+** Instruct emacs to recognize all tables in the current buffer
+	 M-x table-recognize
+
+** There are a number of table recognize/unrecognize commands
+	 M-x table-<TAB>
+
+** Add columns/rows
+	 M-x table-insert-column
+	 M-x table-insert-row
+
+** Delete columns/rows
+	 M-x table-delete-column
+	 M-x table-delete-row
+
+** Merge two cells
+	 M-x table-span-cell
+
+** Split a cell into two
+	 M-x table-split-cell
+
+** Make a cell taller
+	 M-x table-heighten-cell
+
+** Make a cell shorter
+	 M-x table-shorten-cell
+
+** Make a cell wider
+	 M-x table-widen-cell
+
+** Make a cell narrower
+	 M-x table-narrow-cell
+
+** Justify text inside a cell
+	 M-x table-justify
+
+** Fill a table with sequential numbers
+	 M-x table-insert-sequence
+
+** Convert table like logic text to a text table
+	 M-x table-capture
+
+
 * Highlighting
 
 ** Highlight all instances of current word
@@ -720,3 +788,7 @@
 
 ** Insert automatically updating timestamp into file - each time the file saves - add (time-stamp) to the `before-save-hook'.
    Time-stamp: <> (in the first few lines of the file)
+
+** Look up a Unix command
+	 M-x man
+	 M-x woman

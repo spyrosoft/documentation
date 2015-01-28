@@ -7,13 +7,17 @@
 ** Increment and decrement number at point
    http://www.emacswiki.org/emacs/IncrementNumber
 
-** What is the pattern of M & C strokes
+** What is the pattern of M & C strokes?
 
 ** Are registers permanent?
 
+** What does it mean to bury a buffer?
+
 ** How do you customize what delimiters to use in org mode? (See 25.8.1 Format of Outlines)
 
-** Org seems to be limited to three level deep nesting - is this true?
+** Display full file path of current file
+
+** Org seems to be limited to three level deep nesting regarding toggle commands - is this true?
 
 ** What are smerge and emerge and diff mode (18.10 - Files)?
 
@@ -21,9 +25,9 @@
 
 ** How to use word wrapping in org mode?
 
-** Is there an html5 mode - not just xhtml?
+** How do you move a buffer from one window to another?
 
-** Error: No word lists can be found for the language "en_US". M-$
+** Is there an html5 mode - not just xhtml?
 
 ** Look up the English definition of the word at point
 
@@ -31,9 +35,7 @@
 
 ** Does cua-mode Inhibit any commands? (set the variable `cua-enable-cua-keys' to `nil')
 
-** What is burying a buffer?
-
-** Why isn't flyspell working?
+** Why isn't flyspell working? Error: No word lists can be found for the language "en_US". M-$
 
 ** Is there a way to automate exporting from org mode?
 
@@ -46,8 +48,15 @@
 
 ** Look through the emacs gui context menu
 
+** Figure out how to make completion work
+
+** Find !yt videos regarding the speedbar
+
 
 * Answers
+
+** Comment Region (M-x comment-region) sucks - it does not use block comments - is there a way to do this?
+	 Just use M-; - it comments each line, but that's not so bad
 
 ** Change the gui theme
    There is a solarized theme on github, but it looks like a lot of work

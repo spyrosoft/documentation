@@ -1,0 +1,68 @@
+* Navigation
+
+** Move to the beginning of the current or previous function call
+	 C-M-a
+
+** Move to the end of the current or next function call
+	 C-M-a
+
+** Move forward to the end of the next balanced expression
+	 C-M-f
+
+** Move back to the end of the previous balanced expression
+	 C-M-b
+
+** Move forward over a paren group
+	 C-M-n
+
+** Move backward over a paren group
+	 C-M-p
+
+** Move up one nested open paren
+	 C-M-u
+
+** Move down into the next nested set of parens
+	 C-M-d
+
+** Place mark at the very end of balanced expression
+	 C-M-@
+	 C-M-<SPC>
+
+** Check for unbalanced parenthesis
+	 M-x check-parens
+
+
+* Clipboard
+
+** Kill to end of balanced expression
+	 C-M-k
+
+** Set region around current or next function call
+	 C-M-h
+
+
+* Editing
+
+** Transpose balanced previous two expressions (C-u 0 takes the current and next)
+	 C-M-t
+
+** Reindent all the lines within one parenthetical grouping
+	 C-M-q
+
+** Keep block indentation, but move the whole block to make the first line indented properly
+	 C-u <TAB>
+
+
+* Comments
+
+** Insert comment or move point to beginning of comment (C-u specifies how many ; to add/remove)
+	 M-;
+
+** Kill comment on current line
+	 C-u M-;
+
+
+* Misc
+
+** Lookup symbol at point
+	 C-h S
