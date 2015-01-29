@@ -757,8 +757,107 @@ From left to right:
 
 * Lisp
 
-** Execute lisp and display the result in the echo area
+** Read in and eval a Lisp expression in the minibuffer, then insert the result at point
+	 C-u M-:
+
+** Read in and eval a Lisp expression in the minibuffer, then display the result in the echo area
    M-:
+
+** Eval the Lisp expression at point and insert the result in place of the expression
+	 C-u C-x C-e
+
+** Eval the Lisp expression at point and display the result in the echo area
+	 C-x C-e
+
+** Evaluate the expression at point and insert its value in the buffer (in Lisp interaction mode)
+	 C-j
+
+** Evaluate the current function and display the result in the echo area (useful for writing/debugging Lisp)
+	 C-M-x
+
+** Evaluate the current region or entire buffer
+	 M-x eval-region
+	 M-x eval-buffer
+
+** See section 27.7
+
+
+* Version Control (git specific)
+
+** Do the "most appropriate" action on the current VC fileset (e.g. adding, committing, or merging changes)
+	 C-x v v
+
+** Register a file to version control
+	 C-x v i
+
+** Enter a commit message into the vc-log buffer and save it
+	 C-c C-c
+
+** Diff the files in the current vc-fileset with the previous commit (C-u to specify two specific revisions)
+	 C-x v =
+
+** Open a revision of the current file in a new buffer
+	 C-x v ~
+
+** Revert changes to the current vc-fileset to the last revision
+	 C-x v u
+
+** Add a file to the ignore list
+	 C-x v G
+
+** Open a directory in vc mode
+	 C-x v d
+
+** Enter annotations mode on the current file (28.1.6)
+	 C-x v g
+
+*** Hide annotations - only show the code
+		v
+
+*** Show the log of the current line's revision
+		l
+
+*** Visit a previous commit
+		p
+
+*** Visit the next commit
+		n
+
+*** Jump to the revision of the line at point
+		j
+
+** Display the change log for the current fileset (doing so on . in dired is the same as C-x v L)
+	 C-x v l
+
+*** Move down one revision entry
+		n
+
+*** Move up one revision entry
+		p
+
+*** Go to log of next file
+		N
+
+*** Go to log of previous file
+		P
+
+*** Display a diff between the revision at point and the previous revision
+		d
+
+*** Display a diff between all files in the the revision at point and their previous revisions
+		D
+
+*** From compact log view, such as C-x v l on a directory, toggle entry details
+		<RET>
+
+** Display the change log graph for the repository
+	 C-x v L
+
+** Display the changes that a pull request would retrieve
+	 C-x v I
+
+** Display the changes that the next push will send
+	 C-x v O
 
 
 * GUI

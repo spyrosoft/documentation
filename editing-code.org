@@ -62,7 +62,42 @@
 	 C-u M-;
 
 
+* Compilation
+
+** Compile (with `make -k' by default) in the current file's directory
+	 M-x compile
+
+** Compile using the previously specified make command (if additional flags, etc. were passed)
+	 M-x recompile
+
+** Stop the current compilation
+	 M-x kill-compilation
+
+** When an error occurs during compilation, visit the location of the error in the code
+	 C-x `
+	 M-g n
+	 M-g M-n
+
+** Ditto, visit the location of the previous error
+	 M-g p
+	 M-g M-p
+
+** Move point to the error rather than the code
+	 M-n
+
+** Move point to the previous error
+	 M-p
+
+** There are more - see 27.2 Compilation Mode
+
+
 * Misc
 
 ** Lookup symbol at point
 	 C-h S
+
+** C-mode has a bunch of special commands
+	 26.12 - Programs > C Modes
+
+** Assembly does as well
+	 26.13

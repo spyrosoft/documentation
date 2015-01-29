@@ -19,7 +19,9 @@
 
 ** Org seems to be limited to three level deep nesting regarding toggle commands - is this true?
 
-** What are smerge and emerge and diff mode (18.10 - Files)?
+** What are smerge, emerge, diff and ediff (18.10 - Files)?
+
+** What are `alist's, and how do you use them? For example, prettify-symbols-alist.
 
 ** Execute git commands from within emacs
 
@@ -37,10 +39,14 @@
 
 ** Why isn't flyspell working? Error: No word lists can be found for the language "en_US". M-$
 
+** Flymake is broken, too. Useful for HTML?
+
 ** Is there a way to automate exporting from org mode?
 
 
 * Todo
+
+** Find !yt video on how to use git vc integration
 
 ** What commands does C-u affect?
 
@@ -48,9 +54,21 @@
 
 ** Look through the emacs gui context menu
 
-** Figure out how to make completion work
+** Figure out how to make completion work (semantic-mode? 26.10)
+
+** Figure out how to make vc filesets
 
 ** Find !yt videos regarding the speedbar
+
+** Don't forget about Autotyping (Top in Info under Emacs)
+
+
+* Hooks to Utilize
+
+** Programming major modes should have the following modes enabled
+	 semantic-mode
+	 electric-layout-mode
+	 rainbow-delimiters
 
 
 * Answers

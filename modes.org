@@ -12,8 +12,16 @@
 ** Automatically add closing delimiters (further customization can be found in 26.4.3)
 	 electric-pair-mode
 
+** Automatically add newlines when typing characters such as {, }, or ; in JS
+	 electric-layout-mode
+
 ** Accordion functions, etc. (hideshow - see 26.7)
 	 hs-minor-mode
+
+** Alternative to hideshow for accordion collapsing
+	 Foldout (25.8.5 - extends outline mode)
+	 Selective Display (14.17)
+	 Outline Mode (25.8)
 
 ** Enable gui mouse emulation in xterm
    xterm-mouse-mode
