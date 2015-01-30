@@ -1,0 +1,99 @@
+* Emerge
+
+** When you are done merging, save the `*merge*' buffer, and emerge will close
+
+** Emerge accepts input from buffers or files (C-u to specify output file)
+	 M-x emerge-buffers
+	 M-x emerge-files
+
+** If accepting input from buffers, narrowing is respected
+
+** Emerge comes with fast and edit mode - edit mode commands are the same, preceded by C-c C-c
+
+** Use changes from A
+	 a
+
+** Use changes from B
+	 b
+
+** Visit next merge
+	 n
+
+** Visit previous merge
+	 p
+
+** Indicate that merging is complete
+	 q
+
+** Recenter the A, B & Merge
+	 l
+
+** Jump to the difference at point
+	 .
+
+** Execute the same command the specified number of times
+	 -
+
+** Abort merging
+	 C-]
+
+** Copy the A/B version of the current difference to the kill ring
+	 c a
+	 c b
+
+** Insert A/B version of the current difference at point
+	 i a
+	 i b
+
+** Place region around the current difference
+	 m
+
+** Scroll the text up in all three windows (like M-v)
+	 ^
+
+** Scroll the text down in all three windows (like C-v)
+	 v
+
+** Shrink the merge window to 1 line
+	 x 1
+
+** Restore the merge window to its original height
+	 C-u l
+
+** Toggle from fast mode to edit mode
+	 e
+
+** Toggle from edit mode to fast mode
+	 C-c C-c f
+
+** Auto Advance mode allows you to choose A or B changes and jump to the next change immediately
+	 s a
+
+** Skip Prefers mode (automerge mode) shows only merge conflicts which cannot automatically be resolved
+	 s s
+
+** Set A as default
+	 d a
+
+** Set B as default
+	 d b
+
+** Combine A & B
+	 x c
+	 x C
+
+** Show the file/buffer names
+	 x f
+
+** Split the current difference into two at point
+	 x s
+
+** Join the current difference with the following one/previous one
+	 x j
+	 C-u x j
+
+** Trim identical lines off the top and bottom of the difference
+	 x t
+
+** Jump to a difference by specifying its nuber
+	 C-u N j

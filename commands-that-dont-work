@@ -10,3 +10,9 @@ Incomplete mode does not exist and only C-j seems to work
 25.14.7 Converting Between Plain Text and Tables
 Unable to replicate the table command as described
 
+28.5.1 Overview of Emerge
+Exiting emerge as advertised does not work: C-]
+
+29.1 Abbrev Concepts
+Typo on the last line: "which you can *the* reload for use in later sessions."
+Should be "which you can then reload for use in later sessions."

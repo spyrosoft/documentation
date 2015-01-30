@@ -3,3 +3,4 @@ M-<TAB>
 
 Better alternative to the default C-x C-b
 M-x bs-show
+M-x buffer-menu

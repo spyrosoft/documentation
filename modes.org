@@ -3,6 +3,9 @@
 ** Wrap lines by word rather than at the very edge of the page
    visual-line-mode
 
+** Enable expansion of abbrev text
+	 abbrev-mode
+
 ** Scroll commands affect all windows
    scroll-all-mode
 
@@ -22,6 +25,10 @@
 	 Foldout (25.8.5 - extends outline mode)
 	 Selective Display (14.17)
 	 Outline Mode (25.8)
+
+** Emacs Development Environment
+	 global-ede-mode
+	 (global-ede-mode t)
 
 ** Enable gui mouse emulation in xterm
    xterm-mouse-mode

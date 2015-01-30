@@ -1,5 +1,7 @@
 * Questions
 
+** How do you enter recursive editing mode?
+
 ** Repeat the same text input/deletion (like . in vim)
 
 ** Yank and keep point where it is
@@ -19,7 +21,17 @@
 
 ** Org seems to be limited to three level deep nesting regarding toggle commands - is this true?
 
+** Is there a way to move a block of items at a time?
+	 Make a temporary fake heading at the same level, place a region around said block items, demote them, move block, promote them again, and remove fake header (or leave it for organization purposes)
+
 ** What are smerge, emerge, diff and ediff (18.10 - Files)?
+
+** In dired, how do you stop new buffers from being created for every directory visited?
+
+** In dired, how do you open a file and bury it immediately? (Good for opening multiple files at once.)
+
+** Is there a reason that TAGS files should be on disk?
+	 Can't etags be executed on the contents of the emacs buffer?
 
 ** What are `alist's, and how do you use them? For example, prettify-symbols-alist.
 

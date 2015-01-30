@@ -17,6 +17,15 @@
 ** outline-regexp
 	 Define characters to delimit an outline
 
+** vc-handled-backends
+	 Defines what version control systems to recognize and in what order - default (RCS CVS SVN SCCS Bzr Git Hg Mtn Arch)
+
+** emerge-combine-versions-template
+	 Specifies what text is inserted around the two differences when combining A & B
+
+** dired-listing-switches
+	 Specifies which flags are sent to ls in dired mode
+
 
 * Functions
 
@@ -27,10 +36,11 @@
 * Hooks
 
 ** find-file-not-found-functions (runs before find-file-hook)
-   Run functions in list one by one until non-`nil' value returned
+   Runs functions in its list one by one until a non-`nil' value is returned
 
 ** find-file-hook
-   Runs each time a file is opened
+   File opened
 
 ** kill-buffer-hook
-   Runs each time a buffer is killed
+
+** emerge-startup-hook
