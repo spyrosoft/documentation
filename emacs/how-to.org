@@ -23,14 +23,13 @@
 
 ** Display full file path of current file
 
-** Org seems to be limited to three level deep nesting regarding toggle commands - is this true?
-
-** In org mode, is there a way to move a block of items at a time?
-	 Make a temporary fake heading at the same level, place a region around said block items, demote them, move block, promote them again, and remove fake header (or leave it for organization purposes)
-
 ** What are smerge, emerge, diff and ediff (18.10 - Files)?
 
 ** For completion-cycle-threshold, is there a way to display the first complete expansion first, and then the rest of the full expansions?
+
+** How do you move a buffer from one window to another?
+
+** Why do async shell commands not use zshrc/bashrc file?
 
 ** In dired, how do you stop new buffers from being created for every directory visited?
 
@@ -41,13 +40,14 @@
 
 ** What are `alist's, and how do you use them? For example, prettify-symbols-alist.
 
+** Org seems to be limited to three level deep nesting regarding toggle commands - is this true?
+
+** In org mode, is there a way to move a block of items at a time?
+	 Make a temporary fake heading at the same level, place a region around said block items, demote them, move block, promote them again, and remove fake header (or leave it for organization purposes)
+
 ** How to use word wrapping in org mode?
 
-** How do you move a buffer from one window to another?
-
 ** Is there an html5 mode - not just xhtml?
-
-** Why do async shell commands not use zshrc/bashrc file?
 
 ** Look up the English definition of the word at point
 
@@ -66,17 +66,19 @@
 
 ** Find !yt video on how to use git vc integration
 
-** What commands does C-u affect?
-
-** What major/minor modes did I miss?
+** Look through the emacs gui settings interface
 
 ** Look through the emacs gui context menu
 
-** Figure out how to make completion work (semantic-mode? 26.10)
+** What major/minor modes did I miss?
+
+** What commands does C-u affect?
 
 ** Figure out how to make vc filesets
 
 ** Find !yt videos regarding the speedbar
+
+** Find !yt videos regarding tags
 
 ** Don't forget about Autotyping (Top in Info under Emacs)
 
@@ -90,6 +92,10 @@
 
 
 * Answers
+
+** Figure out how to make completion work (semantic-mode? 26.10)
+	 M-/
+	 Tags are weird - not sure quite how to use them
 
 ** Execute git commands from within emacs
 	 C-x v v
@@ -136,8 +142,3 @@
 
 ** See if the tab issue can be fixed by defining tab width in Terminator
    Tabs are displayed as a certain width by using literal spaces in the terminal. The number of which can be changed by visiting `M-x describe-variable tab-width' and clicking Customize - changes go into the .emacs config file.
-
-
-* Give Up
-
-** Reset emacs modes to default
