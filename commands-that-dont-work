@@ -16,3 +16,7 @@ Exiting emerge as advertised does not work: C-]
 29.1 Abbrev Concepts
 Typo on the last line: "which you can *the* reload for use in later sessions."
 Should be "which you can then reload for use in later sessions."
+
+30.15 Updating the Dired Buffer
+Typo on the second to last paragraph: "The files in a Dired *buffers* are normally listed"
+Should be "The files in a Dired buffer are normally listed"

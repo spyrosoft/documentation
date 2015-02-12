@@ -960,6 +960,9 @@ From left to right:
 
 * Abbrev
 
+** Dynamically expand word/symbol at point
+	 M-/
+
 ** Define a new global abbrev
 	 M-x define-global-abbrev <RET> ABBREV <RET> EXPANSION <RET>
 
@@ -1007,6 +1010,9 @@ From left to right:
 ** Go up a directory
 	 ^
 
+** Edit file names or permissions (toggle back with C-c C-c)
+	 C-x C-q
+
 ** Open a file in read-only mode
 	 v
 
@@ -1047,6 +1053,9 @@ From left to right:
 ** Toggle between alpha and date/time sorting
 	 s
 
+** Use a shell find expression
+	 M-x find-name-dired
+
 ** Directory Hiding
 
 *** Toggle hide/show directory listing at point
@@ -1069,6 +1078,9 @@ From left to right:
 ** Run a shell command on the selected files (postpend ; to your command to run sequentially on each file)
 	 ! COMMAND <RET>
 
+** Touch the current file
+	 T
+
 ** Make a hard link
 	 H
 
@@ -1083,9 +1095,6 @@ From left to right:
 
 ** Change the owner
 	 O
-
-** Touch the current file
-	 T
 
 ** Diff the current file with another
 	 =
