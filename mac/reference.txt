@@ -1,0 +1,31 @@
+: Remove duplicate Open With items
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
+defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
+defaults write com.apple.Dock workspaces-auto-swoosh -bool NO; killall Dock
+defaults write org.x.X11 wm_ffm -bool true
+defaults write com.apple.finder AppleShowAllFiles TRUE
+
+control-P 	move up one line
+control-F 	move right one character
+control-N 	move down one line
+control-B 	move left one character
+
+control-K 	delete remainder of current paragraph
+control-Y 	paste text previously deleted with control-K
+
+control-A 	move to start of current paragraph
+control-E 	move to end of current paragraph
+
+control-O 	insert new line after cursor
+control-H 	delete
+control-D 	forwards delete
+
+control-T 	transpose (swap) two surrounding character
+control-V 	move to end, then left one character
+
+Available
+c g m r s w z l u i q j x z
+
+√¶‚â§‚â•œÄ¬•∆í¬©√ß¬Æ¬¨√∑‚â†¬´√•‚àÇÀô‚Ä†√ü‚Äì‚Ä¶≈ì‚àÜÀö‚âà‚à´¬µ‚àë‚àöŒ©
+',.pyfgcrl/=\adhts-;qjkxbmwvz

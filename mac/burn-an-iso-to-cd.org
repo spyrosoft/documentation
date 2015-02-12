@@ -1,0 +1,6 @@
+* How to Burn an ISO to CD
+1. Insert a blank disc.
+2. Start Disk Utility.
+3. From the File menu, choose Open Disk Image and select the ISO to be burned.
+4. In the list of volumes, you will now see an item representing the ISO file. Select it.
+5. Click the Burn button and follow the instructions.
