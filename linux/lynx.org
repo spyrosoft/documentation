@@ -1,0 +1,4 @@
+* Commands
+
+** Spits out data in the current directory regarding the links found:
+	 lynx -traverse URL
