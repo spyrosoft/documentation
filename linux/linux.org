@@ -2,3 +2,17 @@
 
 ** Switch to Another TTY
 	 ctrl + alt + space + f2
+
+** Redirect standard error to null
+	 command 2> /dev/null
+
+** List all processes and IDs
+	 ps aux
+
+** Modify creation date and modified time
+	 touch -acmt [[YY]YY]MMDDhhmm[.ss] FILE
+
+** Show exit status of the previous command
+	 echo $?
+
+

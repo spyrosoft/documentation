@@ -1,9 +1,24 @@
 * Commands
 
-** Find duplicate files
-	 find -not -empty -type f -printf "%s\n" | sort -rn | uniq -d | xargs -I{} -n1 find -type f -size {}c -print0 | xargs -0 md5sum | sort | uniq -w32 --all-repeated=separate
-
 ** Combine find with grep (I put this in my shell rc file)
 	 function find-grep() {
    	find . -type f -name "$1" -exec grep -Hn "$2" {} +
 	 }
+
+** Alternative replace text in files recursively
+	 sed -i 's/search/replace/g' .
+
+** Replace text in files recursively
+	 perl -e "s/search/replace/g" -pi `find . -type f`
+
+** Change permissions for directories only
+	 find . -type d -exec chmod 755 {} +
+
+** Change permissions for files only
+	 find . -type f -exec chmod 644 {} +
+
+** List files ordered by size (-k parameter)
+	 find . -type f -ls | sort -n -k7
+
+** Find duplicate files
+	 find -not -empty -type f -printf "%s\n" | sort -rn | uniq -d | xargs -I{} -n1 find -type f -size {}c -print0 | xargs -0 md5sum | sort | uniq -w32 --all-repeated=separate

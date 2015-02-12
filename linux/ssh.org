@@ -1,0 +1,10 @@
+* Commands
+
+** SSH tunnel proxy into your server
+	 ssh -D 7979 -f -C -q -N spyrosoft@spyrosoft.com
+	 FireFox -> Advanced -> Network -> Settings -> SOCKS Host: localhost Port: 7979
+	 -D specifies port
+	 -f pushes task to the background
+	 -C compresses data
+	 -q surpresses warnings
+	 -N do not execute remote command

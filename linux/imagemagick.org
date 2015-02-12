@@ -1,0 +1,7 @@
+* Commands
+
+** Resize images in batch with the maximum dimensions specified
+	 mogrify -resize 320x240 *.jpg
+
+** Rotate files
+	 convert -rotate 90 [Files...]
