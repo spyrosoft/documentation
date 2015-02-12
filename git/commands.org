@@ -1,0 +1,135 @@
+* rebase
+
+** Do not rebase commits that exist outside your repository
+	 Rebase local changes you've made but haven't shared yet before you push them in order to clean up your story, but never rebase anything you've already pushed somewhere.
+
+** Combine one branch's changes on top of another branch
+	 git checkout examplebranch
+	 git rebase master
+	 git checkout master
+	 git merge examplebranch
+
+** Combine a branch's child branch onto another branch without including the parent branch changes
+	 git checkout childbranch
+	 git rebase --onto master parentbranch childbranch
+	 git checkout master
+	 git merge childbranch
+	 git branch -d childbranch (optional if childbranch is no longer needed)
+
+
+* remote
+
+** Add a remote repository
+   git remote add origin https://github.com/spyrosoft/example.git
+   git remote add friend git://github.com/friend/example.git
+   git remote add colleague git@github.com:colleague/example.git
+
+** Rename what a remote repository is referred to locally
+   git remote rename friend partner
+
+** Remove a remote repository
+   git remote rm partner
+
+** Download all new changes from remote to local
+	 git fetch origin
+
+** Push a local branch to a remote server (origin)
+	 git push origin localbranch
+	 git push origin localbranch:remotebranch (optionally named differently remotely)
+
+** Remove a remote branch (usually after having merged with master)
+	 git push origin --delete remotebranch
+
+
+* branch
+
+** Create a new branch and switch to it
+	 git checkout -b new_branch
+
+** Show all branches
+	 git branch
+
+** Switch to a different branch
+	 git checkout different_branch
+
+** Delete a branch (generally used after merging)
+	 git branch -d example_branch
+
+** Edit a remote branch in your local environment
+	 git checkout -b remotebranch origin/localbranch
+
+** Change the remote branch being tracked for the current branch
+	 git branch -u origin/remotebranch
+
+
+* status
+
+** Short status message
+   git status -s
+
+
+* log
+
+** See the graph of commits and merges
+   git log --graph
+
+** See how many changes were made
+   git log --stat
+
+** See changes from just a specific author
+   git log --author=spyrosoft
+
+** See changes from just a specific commiter
+   git log --committer
+
+** See the patch for each commit
+   git log -p
+
+** See the (2) most recent changes and their diff
+   git log -2
+
+** Show logs since/until a specific amount of time
+   git log --since=2.weeks.4.day.1.hour
+
+
+* commit
+
+** Fix a messed up commit message or add a forgotten file
+   git add forgotten-file
+   git commit --amend
+
+
+* checkout
+
+** Revert a file to last commit
+   git checkout -- <file-name>
+
+
+* reset
+
+** Unstage a staged file (reset only affects staging area when no flags are supplied)
+   git reset HEAD <file-name>
+
+
+* pull
+
+** Pull just one directory
+   git init /path/to/repository
+   cd /path/to/repository
+   git remote add origin git@github.com/username/repository.git
+   echo "path/to/a/directory/you/want" >> .git/info/sparse-checkout
+   echo "another/path/to/a/directory/you/want" >> .git/info/sparse-checkout
+   git pull origin master
+
+
+* tag
+
+** List tags
+   git tag
+
+** Retroactively tag a commit
+   git tag -a <version-for-example-v1.4> <part-of-or-full-commit-checksum>
+
+** Push tagname(s) up to remote server (not automatic)
+   git push origin <version-for-example-v1.4>
+   git push origin --tags

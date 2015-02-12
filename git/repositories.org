@@ -1,0 +1,34 @@
+* Personal Git Server
+
+** Set up a new remote repository on a git server
+   ssh user@git.example.com
+	 mkdir git/repository-name
+	 cd git
+   git clone --bare repository-name repository-name.git
+   exit
+   cd directory/to/commit
+   git init
+   touch README.md
+   git add .
+   git commit -m 'An actual commit message.'
+   git remote add origin ssh://user@git.example.com/~/git/repository-name
+   git push origin master
+   git branch --set-upstream master origin/master
+
+
+* Github
+
+** Create a new repository
+   Visit your github account
+   Click "New Repository"
+   Make it empty
+   git init repository-name
+   cd repository-name
+   touch README.md
+   git add .
+   git commit -m "An actual commit message."
+   git remote add origin https://github.com/github-username/repository-name.git
+   git push -u origin master
+
+** Get user's raw JSON data
+   https://api.github.com/users/USERNAME/events/public
