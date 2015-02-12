@@ -1,0 +1,8 @@
+tomoyo-auditd
+tail -f /var/log/tomoyo/...
+vi /etc/tomoyo/policy/current/domain_policy.conf
+tomoyo-loadpolicy -df </etc/tomoyo/domain_policy.conf
+
+Policy files are saved in /etc/tomoyo
+
+tomoyo-editpolicy

@@ -1,0 +1,17 @@
+* Configure A Printer
+
+: As root
+pacman -S cups system-config-printer gutenprint
+systemctl start cups
+
+: As a non privileged user in a desktop environment
+system-config-printer
+
+: Pretty much nothing works with ipp - it is the default cups protocol. Pretty much everything works with LPD (Line Printer Daemon) - it's the ancient UNIX printer protocol.
+
+: You will need to pick your printer's driver from the list
+
+: Add new printer
+: Network Printer > LPD/LPR Host or Printer
+: Host: 10.1.10.198 (your printer IP address)
+: Queue: L1 (this is specific to your printer - there are lots of different queues - try a few of the most common ones to see if they work then look it up in a search engine)

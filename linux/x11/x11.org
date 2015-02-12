@@ -1,0 +1,10 @@
+Find out what the DISPLAY variable is set to:
+echo $DISPLAY
+
+Allow all users to connect to the X server:
+xhost +
+
+Open a terminal and su to the desired user then export $DISPLAY using the value found above:
+export DISPLAY=":0"
+
+Now you can run applications as another user!

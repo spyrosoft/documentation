@@ -1,0 +1,4 @@
+* General
+
+** Switch to Another TTY
+	 ctrl + alt + space + f2

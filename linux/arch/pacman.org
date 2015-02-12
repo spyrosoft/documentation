@@ -1,0 +1,55 @@
+* How To
+
+** Install a package from the AUR
+	 Acquire and extract the tarball which contains the PKGBUILD and possibly other required files
+	 Look for a README file in src/ - it may contain further information needed later on
+	 cd directory
+	 makepkg -cs
+	 pacman -U pkgname-pkgver.pkg.tar.xz
+
+** Locate orphaned packages
+	 pacman -Qdt
+
+
+* Common Commands
+
+** Remote Package Sync
+
+*** pacman -Syu
+	 	Update list of packages that need upgrading and upgrade them
+
+*** pacman -S
+		Install specific package(s) from the repositories
+
+*** pacman -Si
+		Display information about a given package in the repositories
+
+*** pacman -Ss
+		Search for package(s) in the repositories
+
+
+** Local Package Info
+
+*** pacman -Qe
+		List all installed packages
+
+*** pacman -Q
+		Search for package(s) in the local database
+
+*** pacman -Qs
+		Search for package(s) in the local database - display their description as well
+
+*** pacman -Qi
+		Display information about a given package from the local database
+
+*** pacman -Ql
+		List files within the package in the local database
+
+
+** Remove Local Packages
+
+*** pacman -Rns
+		Remove the specified package(s), its/their configuration(s) and all unneeded dependencies
+
+*** pacman -R
+		Remove the specified package(s), retaining its/their configuration(s) and dependencies

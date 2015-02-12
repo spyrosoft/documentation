@@ -1,0 +1,13 @@
+* Manage Startup Apps
+	gnome-session-properties
+
+* Set thunderbird as default calendar
+	cd /usr/bin
+	mv evolution evolution-disabled
+	ln -s ./thunderbird evolution
+
+* Set focus follows mouse
+	dconf write /org/gnome/desktop/wm/preferences/focus-mode "string 'mouse'"
+
+* Remove panel icons
+	vi /usr/share/gnome-shell/js/ui/panel.js

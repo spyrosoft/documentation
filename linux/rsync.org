@@ -1,0 +1,32 @@
+* Flags
+
+** General purpose
+	 rsync -rvtpgohl
+
+** Preserve [modification times] [permissions] [group] [owner]
+	 -tpgo
+
+** Skip files that are newer on the reciever
+	 -u
+
+** Recursive
+	 -r
+
+** Dry run - no files transferred
+	 -n
+
+** Output file sizes in human readable format
+	 -h
+
+** Copy sym-links as sym-links
+	 -l
+
+** Checksum, not mod-time & size
+	 -c
+
+** Verbose
+	 -v
+
+** Compress file data during transfer
+	 -z
+

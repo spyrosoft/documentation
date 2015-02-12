@@ -1,0 +1,8 @@
+* Add a user to a group
+	gpasswd -a [user] [group]
+
+* Remove a user from a group
+	gpasswd -d [user] [group]
+
+* Show what groups a user belongs to
+	groups [user]

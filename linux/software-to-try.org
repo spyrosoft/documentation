@@ -1,0 +1,19 @@
+* Software to Try
+
+** nessus
+
+** logwatch
+
+** bacman
+
+** chem (for creating chemistry diagrams)
+
+** cmake-gui (make file generator)
+
+** cmp (compare two files byte to byte)
+
+
+* Reviews
+
+** goldendict
+	 Locating an English dictionary file is near impossible
