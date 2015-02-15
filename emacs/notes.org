@@ -799,11 +799,28 @@ From left to right:
 
 * Shell Commands
 
+** Run a shell command and display the output in a separate window
+	 M-! CMD <RET>
+
+** Run a shell command asynchronously and display the output in a separate window
+	 M-& CMD <RET>
+
 ** Change default directory
    M-x cd
 
-** Echo current directory
+** Display the current directory
    M-x pwd
+
+** Run a shell command with region content as stdin (C-u to replace the region with the command output)
+	 M-| CMD <RET>
+
+** Run a command and insert the output at point of current buffer
+	 M-1 M-!
+
+** Open an interactive shell (See 37 for shell-mode commands)
+	 M-x term (can switch to and from emacs environment - see 37.9)
+	 M-x shell (in the emacs environment)
+	 M-x eshell (emacs implemented shell - similar to slime)
 
 ** Environment variables are available in file completion
    /example/$NAMED/environment/variable
@@ -1023,6 +1040,9 @@ From left to right:
 ** Mark the current file
 	 m
 
+** Create new directory
+	 +
+
 ** Copy the current file/directory
 	 C
 
@@ -1053,6 +1073,12 @@ From left to right:
 ** Toggle between alpha and date/time sorting
 	 s
 
+** Toggle between displaying file details and just file names
+	 (
+
+** Select files and stage/commit them to version control (git)
+	 C-x v v
+
 ** Use a shell find expression
 	 M-x find-name-dired
 
@@ -1075,8 +1101,17 @@ From left to right:
 ** Query replace all of the specified files for a regex
 	 Q REGEX <RET> TO <RET>
 
+** Incremental search on specified files
+	 M-s a C-s
+
+** Incremental regex search on specified files
+	 M-s a C-M-s
+
 ** Run a shell command on the selected files (postpend ; to your command to run sequentially on each file)
 	 ! COMMAND <RET>
+
+** Add the current file name to the kill ring (more than one are added to the same entry separated by spaces) (M-0 w stores full path)
+	 w
 
 ** Touch the current file
 	 T
@@ -1170,6 +1205,124 @@ From left to right:
 
 ** Encrypt specified files
 	 :e
+
+
+* Email
+	This needs further exploration (32)
+
+
+* Calendar
+
+** Pop up a calendar in the mini-buffer
+	 M-x calendar
+
+** Pop up a calendar at the specified date in the mini-buffer
+	 C-u M-x calendar
+
+** Navigation
+	 For repitition, you can just type the number - no C-u needed
+
+*** Forward one day
+		C-f
+
+*** Backward one day
+		C-b
+
+*** Forward one week
+		C-n
+
+*** Backward one week
+		C-p
+
+*** Forward one month
+		M-}
+
+*** Backward one month
+		M-{
+
+*** Forward one year
+		C-x ]
+
+*** Backward one year
+		C-x [
+
+*** Move to start of week (repeat to visit previous week)
+		C-a
+
+*** Move to end of week (repeat to visit next week)
+		C-e
+
+*** Move to start of month
+		M-a
+
+*** Move to end of month
+		M-e
+
+*** Move to start of year
+		M-<
+
+*** Move to end of year
+		M->
+
+*** Scroll forward one month
+		>
+
+*** Scroll backward one month
+		<
+
+*** Scroll forward three months
+		C-v
+
+*** Scroll backward three months
+		M-v
+
+** Jump to today
+	 .
+
+** Jump to a specific date
+	 g d
+
+** Jump to a spcefic month
+	 o
+
+** Display how many days are in the current region
+	 M-=
+
+** Scroll most recent window
+	 <SPC>
+	 S-<SPC>
+
+** Jump to week number # into a year
+	 g w
+
+** Jump to number of days into a year
+	 g D
+
+** Display the day of year and how many days of year remaining
+	 p d
+
+** Display times of sunrise and sunset for the selected day
+	 S
+
+** Display the lunar phase for the next ~2 weeks
+	 M
+
+** There is a built in calendar task/item functionality - see 31.10 & 31.15.1
+
+
+* Timeclock
+
+** Clock in
+	 M-x timeclock-in
+
+** Clock out
+	 M-x timeclock-out
+
+** Change to a differenc project
+	 M-x timeclock-change
+
+** Display how much time is left in the workday
+	 M-x timeclock-workday-remaining
 
 
 * GUI

@@ -4,3 +4,8 @@ M-<TAB>
 Better alternative to the default C-x C-b
 M-x bs-show
 M-x buffer-menu
+
+Kill buffer and close window C-x 4 0
+Way too arbitrary - find a better one
+
+Find a better alternative to M-0 C-k

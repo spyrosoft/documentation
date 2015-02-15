@@ -1,22 +1,26 @@
-14.2 Recentering
+* 14.2 Recentering
 C-M-l should be C-S-l
 
-14.16 Useless Whitespace
+* 14.16 Useless Whitespace
 `show-trailing-whitespace' set to `t' does not display newlines at end of file
 
-19.7.2 Fast minibuffer selection & 19.7.2 Fast minibuffer selection
+* 19.7.2 Fast minibuffer selection & 19.7.2 Fast minibuffer selection
 Incomplete mode does not exist and only C-j seems to work
 
-25.14.7 Converting Between Plain Text and Tables
+* 25.14.7 Converting Between Plain Text and Tables
 Unable to replicate the table command as described
 
-28.5.1 Overview of Emerge
+* 28.5.1 Overview of Emerge
 Exiting emerge as advertised does not work: C-]
 
-29.1 Abbrev Concepts
+* 29.1 Abbrev Concepts
 Typo on the last line: "which you can *the* reload for use in later sessions."
 Should be "which you can then reload for use in later sessions."
 
-30.15 Updating the Dired Buffer
+* 30.15 Updating the Dired Buffer
 Typo on the second to last paragraph: "The files in a Dired *buffers* are normally listed"
 Should be "The files in a Dired buffer are normally listed"
+
+* 30.18 Viewing Image Thumbnails in Dired
+Typo in 5th paragraph: "To view *and* the image in its original size"
+Should remove the "and"

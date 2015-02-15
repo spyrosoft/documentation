@@ -1,17 +1,19 @@
 * Questions
 
-** How do you enter recursive editing mode?
+** How do you save and exit in one command?
+
+** Is it possible to set emacs to kill buffers (like *Appropos* or *Buffer List*) upon pressing q?
 
 ** Repeat the same text input/deletion (like . in vim)
 
 ** Yank and keep point where it is
 
-** How do you save and exit in one command?
-
 ** Increment and decrement number at point
    http://www.emacswiki.org/emacs/IncrementNumber
 
-** What is the pattern of M & C strokes?
+** How do you commit multiple files at once? Dired? (git)
+
+** How do you enter recursive editing mode?
 
 ** Are registers permanent?
 
@@ -21,11 +23,19 @@
 
 ** How do you customize what delimiters to use in org mode? (See 25.8.1 Format of Outlines)
 
+** Is there a method of displaying version control local changes in dired?
+
 ** Display full file path of current file
+
+** Electric pair mode only if the next character is whitespace?
 
 ** What are smerge, emerge, diff and ediff (18.10 - Files)?
 
+** Is there a way to change from flattened undo history to tree history?
+
 ** For completion-cycle-threshold, is there a way to display the first complete expansion first, and then the rest of the full expansions?
+
+** What is the pattern of M & C strokes?
 
 ** How do you move a buffer from one window to another?
 
@@ -49,7 +59,15 @@
 
 ** Is there an html5 mode - not just xhtml?
 
+** Why do commands work differently in the gui vs the shell? For example, C-<RET> in org mode.
+
+** What is the best way to set a rectangular region around one column and the absolute right-most portion of the buffer?
+
+** Is there a way to edit documents on a remote server with a locally running version of emacs?
+
 ** Look up the English definition of the word at point
+
+** What the heck is emacs server? (see 38)
 
 ** How does scroll-conservatively work?
 
@@ -64,11 +82,17 @@
 
 * Todo
 
+** Set up mail to see if it is useful (See 32)
+
 ** Find !yt video on how to use git vc integration
+
+** Find out about emacs package managers
 
 ** Look through the emacs gui settings interface
 
 ** Look through the emacs gui context menu
+
+** Find !yt video or other resource on how to use timeclock
 
 ** What major/minor modes did I miss?
 

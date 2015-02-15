@@ -26,6 +26,9 @@
 ** dired-listing-switches
 	 Specifies which flags are sent to ls in dired mode
 
+** shell-command-default-error-buffer
+	 When set to `t', error output is sent to a separate buffer
+
 
 * Functions
 
