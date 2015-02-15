@@ -8,6 +8,8 @@
 
 ** Yank and keep point where it is
 
+** Copy text from point to end of line
+
 ** Increment and decrement number at point
    http://www.emacswiki.org/emacs/IncrementNumber
 
@@ -22,6 +24,8 @@
 ** How to reverse search immedately rather than redisplaying the current result?
 
 ** How do you customize what delimiters to use in org mode? (See 25.8.1 Format of Outlines)
+
+** How do you delete all whitespace around point?
 
 ** Is there a method of displaying version control local changes in dired?
 
@@ -78,41 +82,6 @@
 ** Flymake is broken, too. Useful for HTML?
 
 ** Is there a way to automate exporting from org mode?
-
-
-* Todo
-
-** Set up mail to see if it is useful (See 32)
-
-** Find !yt video on how to use git vc integration
-
-** Find out about emacs package managers
-
-** Look through the emacs gui settings interface
-
-** Look through the emacs gui context menu
-
-** Find !yt video or other resource on how to use timeclock
-
-** What major/minor modes did I miss?
-
-** What commands does C-u affect?
-
-** Figure out how to make vc filesets
-
-** Find !yt videos regarding the speedbar
-
-** Find !yt videos regarding tags
-
-** Don't forget about Autotyping (Top in Info under Emacs)
-
-
-* Hooks to Utilize
-
-** Programming major modes should have the following modes enabled
-	 semantic-mode
-	 electric-layout-mode
-	 rainbow-delimiters
 
 
 * Answers
