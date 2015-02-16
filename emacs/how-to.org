@@ -2,6 +2,8 @@
 
 ** How do you save and exit in one command?
 
+** For completion-cycle-threshold, is there a way to display the first complete expansion first, and then the rest of the full expansions?
+
 ** Is it possible to set emacs to kill buffers (like *Appropos* or *Buffer List*) upon pressing q?
 
 ** Repeat the same text input/deletion (like . in vim)
@@ -29,15 +31,17 @@
 
 ** Is there a method of displaying version control local changes in dired?
 
+** Is there a technique for visually customizing the color theme?
+
 ** Display full file path of current file
 
 ** Electric pair mode only if the next character is whitespace?
 
 ** What are smerge, emerge, diff and ediff (18.10 - Files)?
 
-** Is there a way to change from flattened undo history to tree history?
+** Is there a way to make the screen flash less contrasty?
 
-** For completion-cycle-threshold, is there a way to display the first complete expansion first, and then the rest of the full expansions?
+** Is there a way to change from flattened undo history to tree history?
 
 ** What is the pattern of M & C strokes?
 
@@ -67,6 +71,8 @@
 
 ** What is the best way to set a rectangular region around one column and the absolute right-most portion of the buffer?
 
+** Is it possible to narrow to a rectangular region?
+
 ** Is there a way to edit documents on a remote server with a locally running version of emacs?
 
 ** Look up the English definition of the word at point
@@ -85,6 +91,10 @@
 
 
 * Answers
+
+** How do you set tab width? (I prefer tabs and two spaces per tab displayed)
+	 M-x customize-browse
+	 Emacs > Editing > Indent
 
 ** Figure out how to make completion work (semantic-mode? 26.10)
 	 M-/

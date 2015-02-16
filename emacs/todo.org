@@ -1,8 +1,16 @@
 * Todo
 
+** M-x customize-browse
+
+** C-h b
+
+** Read through the FAQ
+
 ** Set up mail to see if it is useful (See 32)
 
 ** Find !yt video on how to use git vc integration
+
+** Research recursive editing mode
 
 ** Find out about emacs package managers
 

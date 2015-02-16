@@ -364,8 +364,11 @@
 
 * Frames/Windows/Buffers
 
-** Clear all buffers but this one
-   C-x 0
+** Remove all windows but this one
+   C-x 1
+
+** Remove all windows but the next one
+	 C-x 0
 
 ** Close a Buffer
    C-x k
@@ -388,16 +391,19 @@
 ** Delete selected window and kill its buffer
    C-x 4 0
 
-** Resizing Windows
+** Close all buffers and windows
+	 M-x clear-desktop
 
-*** Increase height (C-u with a negative argument shrinks it instead)
-    C-x ^
+** Resizing Windows
 
 *** Increase width
     C-x }
 
 *** Decrease width
     C-x {
+
+*** Increase height (C-u with a negative argument shrinks it instead)
+    C-x ^
 
 *** Make all windows the same height (`malance-windows')
     C-x +
@@ -408,11 +414,8 @@
 ** Toggle current buffer to read only
    C-x C-q
 
-** Display all buffers
+** Display all buffers (C-u to only display visited files)
    C-x C-b
-
-** Display all buffers of visited files
-   C-u C-x C-b
 
 ** Take the current buffer and clone it to a different buffer with its own name, point, narrowing, markers, major modes, and local variables (C-u to prompt for a name for it)
    M-x clone-indirect-buffer
@@ -532,6 +535,15 @@
 
 ** Jump to the first instance of differing text in two windows (C-u to ignore whitespace)
    M-x compare-windows
+
+
+* Recursive Editing
+
+** Done with recursive editing
+	 C-M-c
+
+** Abort recursive editing
+	 C-]
 
 
 * Case Conversion
@@ -797,6 +809,24 @@ From left to right:
    M-s h l REGEX <RET> FACE <RET>
 
 
+* Sorting
+
+** Sort lines
+	 M-x sort-lines
+
+** Sort by specified columns (Numeric argument to specify which column) (Negative to move right to left)
+	 M-x sort-fields
+
+** Sort by numeric specified columns - same as sort-fields only 2 comes before 10
+	 M-x sort-numeric-fields
+
+** Sort by a region of columns in a table (Set mark at beginning of first column and point at end of last column)
+	 M-x sort-columns
+
+** Reverse lines in region (doesn't work with rectangular regions)
+	 M-x reverse
+
+
 * Shell Commands
 
 ** Run a shell command and display the output in a separate window
@@ -815,7 +845,7 @@ From left to right:
 	 M-| CMD <RET>
 
 ** Run a command and insert the output at point of current buffer
-	 M-1 M-!
+	 C-u M-!
 
 ** Open an interactive shell (See 37 for shell-mode commands)
 	 M-x term (can switch to and from emacs environment - see 37.9)
@@ -849,6 +879,18 @@ From left to right:
 ** Evaluate the current region or entire buffer
 	 M-x eval-region
 	 M-x eval-buffer
+
+** In the *scratch* buffer, evaluate the current line
+	 C-j
+
+** Switch a variable from global to local for the current buffer
+	 M-x make-local-variable <RET> VAR <RET>
+
+** Release a variable from local in the current buffer back to global
+	 M-x kill-local-variable <RET> VAR <RET>
+
+** Identify a variable which should automatically be converted to a local variable upon opening a new buffer
+	 M-x make-variable-buffer-local
 
 ** See section 27.7
 
@@ -1207,6 +1249,49 @@ From left to right:
 	 :e
 
 
+* Emacs Sessions
+
+** Emacs Sessions can be enabled by adding desktop-save-mode to your .emacs config file
+	 (desktop-save-mode 1)
+
+** Sessions can be stored on a directory basis - open emacs from the desired directory, and the session for that directory will load
+
+** Switch between saved sessions
+	 M-x desktop-change-dir
+
+** Revert to the desktop loaded most recently
+	 M-x desktop-revert
+
+
+* Packages
+
+** List available, installed, and built-in packages
+	 M-x list-packages
+
+** Mark package for installation
+	 i
+
+** Mark all packages with available upgrade
+	 U
+
+** Mark package for deletion
+	 d
+
+** Download and install or delete marked packages
+	 x
+
+** Remove mark
+	 u
+
+** Install a package from file
+	 M-x package-install-file
+
+** Verify the source of a package via public keys available from pgp.mit.edu or other
+	 M-x package-import-keyring
+
+** See 48.2 Package Installation for details on loading packages on startup
+
+
 * Email
 	This needs further exploration (32)
 
@@ -1329,8 +1414,11 @@ From left to right:
 
 ** Skipped over this - see chapter 21
 
+** Enable clicking links to open external browser
+	 M-x goto-address-mode
 
-* HELP
+
+* Help
 
 ** Find in help something that matches a keyword
    C-h a
@@ -1341,6 +1429,18 @@ From left to right:
 ** Search for variables whose values match the specified pattern
    M-x apropos-value
 
+** Find the value and description of a variable
+	 C-h v
+
+** Describe the current major and minor modes
+	 C-h m
+
+** Describe the current syntax table
+	 C-h s
+
+** Access the FAQ
+	 C-h C-f
+
 
 * Misc
 
@@ -1350,9 +1450,22 @@ From left to right:
 ** There's a thing called file shadowing which seems to be useful for servers...?
    C-h a shadow
 
+** Display the 300 most recent keystrokes
+	 C-h l
+
 ** Insert automatically updating timestamp into file - each time the file saves - add (time-stamp) to the `before-save-hook'.
    Time-stamp: <> (in the first few lines of the file)
 
 ** Look up a Unix command
 	 M-x man
 	 M-x woman
+
+** Open a URL inside emacs
+	 M-x browse-url
+
+** Convert back and forth from morse code
+	 M-x morse-region
+	 M-x unmorse-region
+
+** Convert the region to the NATO phonetic alphabet
+	 M-x nato-region

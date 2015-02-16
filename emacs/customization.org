@@ -1,9 +1,7 @@
-* Shell Options
-
-** There is a way to autocomplete file names using shell autocompletion - look under Shell in the manual directory.
-
-
 * Variables
+
+** desktop-save-mode
+	 Store the current buffers, windows, and modes in an emacs desktop file to be restored upon entering emacs next time
 
 ** completion-ignored-extensions
    Do not display the specified extensions in the completion minibuffer
@@ -29,6 +27,17 @@
 ** shell-command-default-error-buffer
 	 When set to `t', error output is sent to a separate buffer
 
+** package-archives
+	 Add items to the alist to include additional package servers such as ( "MELPA" . "http://melpa.milkbox.net" ), ( "Marmalade" . "http://marmalade-repo.org" )
+
+** package-enable-at-startup
+	 Set to nil for lazy package loading
+
+** custom-file
+	 To separate out the editor customizations from the rest of the config
+	 (setq custom-file "~/.emacs.d/custom-file.el")
+	 (load custom-file)
+
 
 * Functions
 
@@ -47,3 +56,15 @@
 ** kill-buffer-hook
 
 ** emerge-startup-hook
+
+
+* General
+
+** Groups of settings can be transported around as one via Custom Themes (theme files location defaults to ~/.emacs.d/)
+	 M-x customize-themes
+	 M-x customize-create-theme
+
+
+* Shell Options
+
+** There is a way to autocomplete file names using shell autocompletion - look under Shell in the manual directory.

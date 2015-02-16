@@ -47,8 +47,17 @@
 	 subword-mode
 	 superword-mode
 
+** Save your minibuffer history between emacs sessions
+	 savehist-mode
+
 
 * Major Modes
 
 ** Read-only mode for documents - <SPC> to scroll window down & <DEL> to scroll up
    view-mode
+
+** Picture mode is useful for moving to arbitarary columns and rows and inserting text - may be useful for diagramming (See 41)
+	 picture-mode
+
+** Editing binary can be done in hexl mode (See 42)
+	 M-x hexl-find-file
