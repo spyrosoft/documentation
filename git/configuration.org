@@ -1,0 +1,4 @@
+* Global
+
+** Gitignore file
+	 git config --global core.excludesfile '/path/to/global/.gitignore'
