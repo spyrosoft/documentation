@@ -10,6 +10,8 @@
 
 ** Yank and keep point where it is
 
+** Insert characters and keep point where it is
+
 ** Copy text from point to end of line
 
 ** Increment and decrement number at point
@@ -32,6 +34,8 @@
 ** Is there a method of displaying version control local changes in dired?
 
 ** Is there a technique for visually customizing the color theme?
+
+** Is there a way to drag a region of lines around like you do with C-x C-t?
 
 ** Display full file path of current file
 
@@ -66,6 +70,8 @@
 ** How to use word wrapping in org mode?
 
 ** Is there an html5 mode - not just xhtml?
+
+** Is there a way to move blocks of lines up and down with regions or something?
 
 ** Why do commands work differently in the gui vs the shell? For example, C-<RET> in org mode.
 

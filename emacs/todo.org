@@ -1,14 +1,15 @@
 * Todo
 
 ** M-x customize-browse
+	 Left off on Convenience
 
 ** C-h b
 
 ** Read through the FAQ
 
-** Set up mail to see if it is useful (See 32)
-
 ** Find !yt video on how to use git vc integration
+
+** Set up mail to see if it is useful (See 32)
 
 ** Research recursive editing mode
 
@@ -35,6 +36,12 @@
 ** Find !yt videos regarding tags
 
 ** Don't forget about Autotyping (Top in Info under Emacs)
+
+** Find out what dynamic completion mode is for
+
+** Find out what f2 is for
+
+** Find out what tags are for
 
 
 * Hooks to Utilize

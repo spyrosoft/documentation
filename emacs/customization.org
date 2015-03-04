@@ -58,6 +58,13 @@
 ** emerge-startup-hook
 
 
+* Config File
+
+** Set a directory specific variable
+	 .dir-locals.el file in the directory
+	 See 49.2.5 Per-Directory Local Variables for details
+
+
 * General
 
 ** Groups of settings can be transported around as one via Custom Themes (theme files location defaults to ~/.emacs.d/)

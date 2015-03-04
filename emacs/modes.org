@@ -50,6 +50,12 @@
 ** Save your minibuffer history between emacs sessions
 	 savehist-mode
 
+** Insert newlines around certain characters
+	 M-x electric-layout-mode
+
+** What is dynamic completion mode?
+	 M-x dynamic-completion-mode
+
 
 * Major Modes
 
@@ -61,3 +67,4 @@
 
 ** Editing binary can be done in hexl mode (See 42)
 	 M-x hexl-find-file
+

@@ -9,7 +9,7 @@
 ** Move to top/bottom of buffer
    M-< / M->
 
-** Return to Previous Mark
+** Return to Previous Mark (Continues to cycle through previous marks when repeated)
    C-u C-<SPC>
 
 ** Go to line
@@ -488,6 +488,9 @@
 ** Swap two surrounding words and move forward one
    M-t
 
+** Swap two surrounding sexpressions and move forward one
+	 C-M-t
+
 ** Swap two surrounding characters and move forward one
    C-t
 
@@ -891,6 +894,9 @@ From left to right:
 
 ** Identify a variable which should automatically be converted to a local variable upon opening a new buffer
 	 M-x make-variable-buffer-local
+
+** Move to the very end of the current defun and reindent
+	 M-)
 
 ** See section 27.7
 
@@ -1410,6 +1416,21 @@ From left to right:
 	 M-x timeclock-workday-remaining
 
 
+* Bug Reporting
+
+** There is a package called debbugs for this purpose
+
+** Search for bugs in the database
+	 M-x debbugs-gnu-search
+
+** List known bugs
+	 M-x debbugs-gnu
+
+** Submit a bug
+	 M-x report-emacs-bug
+	 See 52.4 Checklist for Bug Reports for details
+
+
 * GUI
 
 ** Skipped over this - see chapter 21
@@ -1420,20 +1441,23 @@ From left to right:
 
 * Help
 
-** Find in help something that matches a keyword
+** Show commands that match a keyword
    C-h a
 
-** Find in help what a specific key sequence does
+** Describe what a specific key sequence does
    C-h k
 
-** Search for variables whose values match the specified pattern
-   M-x apropos-value
-
-** Find the value and description of a variable
+** Describe a variable's purpose and value
 	 C-h v
+
+** Search through the Emacs manual for keywords
+	 C-h F
 
 ** Describe the current major and minor modes
 	 C-h m
+
+** Search for variables whose values match the specified pattern
+   M-x apropos-value
 
 ** Describe the current syntax table
 	 C-h s
