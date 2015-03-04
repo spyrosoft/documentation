@@ -1,0 +1,19 @@
+* Shell Commands
+
+** Load a database
+	 psql DATABASE
+
+
+* PostgreSQL Commands
+
+** Show databases
+	 \l
+
+** Show tables (Show Size and Description with \d+)
+	 \d
+
+** Show columns
+	 \d TABLE
+
+** Describe table
+	 \d+ table
