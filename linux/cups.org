@@ -2,7 +2,7 @@
 
 : As root
 pacman -S cups system-config-printer gutenprint
-systemctl start cups
+systemctl start org.cups.cupsd.service
 
 : As a non privileged user in a desktop environment
 system-config-printer
