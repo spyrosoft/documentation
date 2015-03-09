@@ -391,7 +391,7 @@
 ** Delete selected window and kill its buffer
    C-x 4 0
 
-** Close all buffers and windows
+** Delete all buffers and windows
 	 M-x clear-desktop
 
 ** Resizing Windows
@@ -630,29 +630,6 @@
 ** Open a file by file name alone from the file name cache
    C-x C-f FILE-NAME
 
-** Filesets
-
-*** Add a buffer to a fileset (requires filesets-init to be run first - if BUFFER-NAME doesn't exist, it is created)
-    M-x filesets-add-buffer <RET> BUFFER-NAME <RET>
-
-*** Remove buffer from a fileset
-    M-x filesets-remove-buffer
-
-*** Edit a fileset
-    M-x filesets-edit
-
-*** Open a fileset
-    M-x filesets-open
-
-*** Close all buffers in a fileset
-    M-x filesets-close
-
-*** Run a shell command on a fileset
-    M-x filesets-run-cmd
-
-*** Edit the current filesets
-    M-x filesets-edit
-
 ** Add a directory to the file name cache
    M-x file-cache-add-directory <RET> DIRECTORY <RET>
    M-x file-cache-add-directory-using-find <RET> DIRECTORY <RET>
@@ -672,6 +649,30 @@
 
 ** Forget that the current buffer has been changed (opposite with C-u)
    M-~
+
+
+* Filesets
+
+** Add a buffer to a fileset (requires filesets-init to be run first - if BUFFER-NAME doesn't exist, it is created)
+	 M-x filesets-add-buffer <RET> BUFFER-NAME <RET>
+
+** Remove buffer from a fileset
+	 M-x filesets-remove-buffer
+
+** Edit a fileset
+	 M-x filesets-edit
+
+** Open a fileset
+	 M-x filesets-open
+
+** Close all buffers in a fileset
+	 M-x filesets-close
+
+** Run a shell command on a fileset
+	 M-x filesets-run-cmd
+
+** Edit the current filesets
+	 M-x filesets-edit
 
 
 * Modes

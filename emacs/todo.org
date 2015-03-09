@@ -1,13 +1,18 @@
 * Todo
 
 ** M-x customize-browse
-	 Left off on Convenience
-
-** C-h b
+	 Files > Dired
 
 ** Read through the FAQ
 
+** Identify how to map hippie expand to tab if the line is already indented
+	 http://www.emacswiki.org/emacs/TabCompletion
+	 http://www.emacswiki.org/emacs/HippieExpand
+	 Set the hippie-expand-try-functions-list variable to something better
+
 ** Find !yt video on how to use git vc integration
+
+** Figure out how to make vc filesets
 
 ** Set up mail to see if it is useful (See 32)
 
@@ -16,6 +21,8 @@
 ** Find out about emacs package managers
 
 ** Find a way to make tab autocomplete inline code. It would never make sense for tab to be pressed except at the beginning of the line.
+
+** Figure out how to prevent the deletion of tabs on lines which only contain tabs
 
 ** Look through the emacs gui settings interface
 
@@ -29,8 +36,6 @@
 
 ** What commands does C-u affect?
 
-** Figure out how to make vc filesets
-
 ** Find !yt videos regarding the speedbar
 
 ** Find !yt videos regarding tags
@@ -43,6 +48,8 @@
 
 ** Find out what tags are for
 
+** Figure out how the C-x 6 commands work (two columns e.g. 2C-split)
+
 
 * Hooks to Utilize
 
@@ -50,3 +57,9 @@
 	 semantic-mode
 	 electric-layout-mode
 	 rainbow-delimiters
+
+
+* Done
+
+** C-h b
+

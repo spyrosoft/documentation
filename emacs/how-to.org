@@ -6,8 +6,6 @@
 
 ** Is it possible to set emacs to kill buffers (like *Appropos* or *Buffer List*) upon pressing q?
 
-** Repeat the same text input/deletion (like . in vim)
-
 ** Yank and keep point where it is
 
 ** Insert characters and keep point where it is
@@ -20,6 +18,8 @@
 ** How do you commit multiple files at once? Dired? (git)
 
 ** How do you enter recursive editing mode?
+
+** How do you delete an active region when a character is inserted?
 
 ** Are registers permanent?
 
@@ -151,3 +151,7 @@
 
 ** See if the tab issue can be fixed by defining tab width in Terminator
    Tabs are displayed as a certain width by using literal spaces in the terminal. The number of which can be changed by visiting `M-x describe-variable tab-width' and clicking Customize - changes go into the .emacs config file.
+
+** Repeat the same text input/deletion (like . in vim)
+	 Yes! http://www.emacswiki.org/emacs/dot-mode.el
+
