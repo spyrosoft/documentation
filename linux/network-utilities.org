@@ -1,0 +1,7 @@
+* nc
+
+** nc -l 80
+	 Prints out everything that comes in on port 80 (run as root)
+
+** nc localhost 80
+	 Accepts input from stdin & sends it to port 80

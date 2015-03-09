@@ -1,0 +1,9 @@
+* Port Forwarding
+	iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
+	iptables -A INPUT -i eth0 -p tcp --dport 8080 -j ACCEPT
+	iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+	http://www.cyberciti.biz/faq/linux-port-redirection-with-iptables/
+	http://stackoverflow.com/questions/10727443/how-to-use-iptables-in-linux-to-forward-http-and-https-traffic-to-a-transparent
+	http://forum.slicehost.com/index.php?p=/discussion/2497/iptables-redirect-port-80-to-port-8080/p1
+	http://www.fclose.com/816/port-forwarding-using-iptables/
+
