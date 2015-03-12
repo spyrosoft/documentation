@@ -1,0 +1,14 @@
+* Commands
+
+** Run screen with a named session
+	 screen -S SESSION-NAME
+
+** Detatch the current screen session
+	 C-a d
+	 C-a C-d
+
+** List currently running sessions
+	 screen -list
+
+** Reattach to a previously detached session
+	 screen -r SESSION-NAME
