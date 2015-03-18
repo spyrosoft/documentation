@@ -23,6 +23,8 @@
 
 ** Are registers permanent?
 
+** Is there a way to transpose the current line and the line above rather than the two lines above?
+
 ** Abbreviations expand without pressing space?
 
 ** How to reverse search immedately rather than redisplaying the current result?

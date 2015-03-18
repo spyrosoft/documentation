@@ -20,6 +20,8 @@
 
 ** Find out about emacs package managers
 
+** Find a way to jump to function definition
+
 ** Find a way to make tab autocomplete inline code. It would never make sense for tab to be pressed except at the beginning of the line.
 
 ** Figure out how to prevent the deletion of tabs on lines which only contain tabs
