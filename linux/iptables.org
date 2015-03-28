@@ -7,3 +7,14 @@
 	http://forum.slicehost.com/index.php?p=/discussion/2497/iptables-redirect-port-80-to-port-8080/p1
 	http://www.fclose.com/816/port-forwarding-using-iptables/
 
+* Block all ports except for specified ports
+iptables -A INPUT -p tcp -m tcp -m multiport --dports 80,443 -j ACCEPT
+<insert further allowed list here>
+iptables -A INPUT -m conntrack -j ACCEPT  --ctstate RELATED,ESTABLISHED
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A INPUT -j DROP
+iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A OUTPUT -j DROP
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -j DROP
+http://superuser.com/questions/769814/how-to-block-all-ports-except-80-443-with-iptables
