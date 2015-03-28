@@ -1,13 +1,32 @@
+* Navigation
+
+** Jump to definition of symbol at point
+	 M-.
+
+** Jump back to the position where M-. was invoked
+	 M-,
+	 M-*
+
 * Compilation Commands
 
-** 
+** Compile the top level form at point (C-u for max debug settings, M-- for speed)
+	 C-c C-c
+
+** Compile and load the current buffer (C-u for max debug settings, M-- for speed)
+	 C-c C-k
+
+** Compile but do not load the current buffer
+	 C-c M-k
+
+** Compile and load from a file
+	 C-c C-l
 
 * Evaluation Commands
 
-** Evaluate the expression around point
+** Evaluate the expression at point
 	 C-x C-e
 
-** Evaluate the top level form and reset function definitions
+** Evaluate the top level form and reset function definition if necessary
 	 C-M-x
 
 ** Evaluate the expression read in via the minibuffer
@@ -27,3 +46,76 @@
 	 
 ** Evaluate the expression prior to point and pretty print results in a new buffer
 	 C-c C-p
+
+* Cross Reference Commands
+
+** Show function callers
+	 C-c C-w c
+
+** Show all known callers
+	 C-c C-w w
+
+** Show references to global variable
+	 C-c C-w r
+
+** Show bindings of a global variable
+	 C-c C-w b
+
+** Show assignments to a global variable
+	 C-c C-w s
+
+** Show expansions of a macro
+	 C-c C-w m
+
+** List callers of a function
+	 C-c <
+
+** List callees of a function
+	 C-c >
+
+* Compilation Notes
+
+** Move point to next note
+	 M-n
+
+** Move point to previous note
+	 M-p
+
+** Remove all notes
+	 C-c M-c
+
+** Next error
+	 C-x '
+
+* Documentation Commands
+
+** Describe the symbol at point
+	 C-c C-d d
+
+** Describe the function at point
+	 C-c C-d f
+
+** Search for documentation of a symbol name (C-u for specific package)
+	 C-c C-d A
+
+** Search for documentation of an internal symbol name
+	 C-c C-d z
+
+** Show all symbols in a package
+	 C-c C-d p
+
+** Hyperspec lookup
+	 C-c C-d h
+
+* Macro Expansion Commands
+
+** Macroexpand the expression at point once
+	 C-c C-m
+
+** Fully macroexpand the expression at point
+	 C-c M-m
+
+* Disassembly Commands
+
+** Disassemble the function definition of the symbol at point
+	 C-c M-d
