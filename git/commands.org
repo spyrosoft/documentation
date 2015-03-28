@@ -1,4 +1,13 @@
+* Useful Shell Commands
+
+** Identify how many lines of code each author has commited
+	 git ls-tree -r -z --name-only HEAD -- * | xargs -0 -n1 git blame --line-porcelain HEAD | grep "^author " | sort | uniq -c | sort -nr
+
+
 * rebase
+
+** Rebase only the commits which you want to keep from four commits ago on
+	 git rebase -i HEAD~4 --aboveAll
 
 ** Do not rebase commits that exist outside your repository
 	 Rebase local changes you've made but haven't shared yet before you push them in order to clean up your story, but never rebase anything you've already pushed somewhere.
