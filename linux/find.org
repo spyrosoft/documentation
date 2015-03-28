@@ -5,9 +5,6 @@
    	find . -type f -name "$1" -exec grep -Hn "$2" {} +
 	 }
 
-** Alternative replace text in files recursively
-	 sed -i 's/search/replace/g' .
-
 ** Replace text in files recursively
 	 perl -e "s/search/replace/g" -pi `find . -type f`
 

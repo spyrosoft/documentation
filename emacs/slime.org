@@ -1,0 +1,29 @@
+* Compilation Commands
+
+** 
+
+* Evaluation Commands
+
+** Evaluate the expression around point
+	 C-x C-e
+
+** Evaluate the top level form and reset function definitions
+	 C-M-x
+
+** Evaluate the expression read in via the minibuffer
+	 C-c :
+
+** Evaluate currently selected region
+	 C-c C-r
+
+** Edit the value of a setf in a buffer (commit changes with C-c C-c)
+	 C-c E
+
+** Undefine the function symbol at point (calls fmakunbound)
+	 C-c C-u
+
+** Evaluate the expression prior to point in the output buffer (useful for when writing to the output stream)
+	 C-x M-e
+	 
+** Evaluate the expression prior to point and pretty print results in a new buffer
+	 C-c C-p

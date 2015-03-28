@@ -599,7 +599,7 @@
 ** Open a directory for browsing (don't specify a file name)
    C-x C-f
 
-** Update the contents of a buffer in Dired (directory edit) mode
+** Update/refresh the contents of a buffer in Dired (directory edit) mode
    g
 
 ** Reload the file contents periodically (like unix tail command)
