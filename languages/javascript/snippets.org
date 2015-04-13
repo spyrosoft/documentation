@@ -1,0 +1,19 @@
+* Encode string using base64
+atob(unescape(encodeURIComponent(EXAMPLE-STRING)))
+
+* Get event keycode
+function get_event_key_code( event )
+{
+	var key_code = event.keyCode;
+}
+
+* Check if a variable is a number
+isFinite( NUMBER-TO-TEST )
+
+* Convert numbers to/from hex to decimal
+function decimal_to_hex( decimal_number ) {
+	return decimal_number.toString( 16 );
+}
+function hex_to_decimal( hex_number ) {
+	return parseInt( hex_number, 16 );
+}

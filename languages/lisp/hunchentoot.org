@@ -1,0 +1,59 @@
+* Running Hunchentoot as a Non-Privileged User
+
+** Port 80 is not available to non-privileged users
+	 My solution is to set up haproxy and send traffic to the appropriate port that way.
+	 It makes sense to do it this way as each website can have its own user running its own instance of hunchentoot on whatever available ports.
+
+
+* Starting Hunchentoot
+
+** Basic
+(hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 8080))
+
+** Advanced
+(ql:quickload :hunchentoot)
+(ql:quickload :cl-who)
+
+(defpackage :REPLACE-ME
+	(:use :cl :cl-who :hunchentoot))
+
+(in-package :REPLACE-ME)
+
+(defvar REPLACE-ME-SERVER
+	(make-instance 'hunchentoot:easy-acceptor
+		:document-root "~/hunchentoot/"
+		:error-template-directory "~path/to/error/template/directory/" ; As of this moment, this doesn't seem to do anything...
+		:access-log-destination "~path/to/access/log/directory/access.log"
+		:message-log-destination "~path/to/message/log/directory/message.log"
+		:port 8080 ; This port needs to be available for this to work - change it if need be
+	))
+
+(defun REPLACE-ME-SERVER-START ()
+	(hunchentoot:start
+		REPLACE-ME-SERVER))
+
+(defun REPLACE-ME-SERVER-STOP ()
+	(hunchentoot:stop
+		REPLACE-ME-SERVER))
+
+(defun REPLACE-ME-SERVER-RESTART ()
+	(REPLACE-ME-SERVER-START)
+	(REPLACE-ME-SERVER-STOP))
+
+(load "~path/to/site.lisp")
+
+
+* Demos
+
+** https://github.com/quek/hunchentoot-blank
+
+** https://github.com/smanek/trivial-lisp-webapp
+
+** https://github.com/mck-/hunch
+	 For JSON
+
+** https://github.com/lokedhs/hunchentoot-single-signon
+	 No way... need to see if this actually works
+
+** https://github.com/orivej/ht-session
+	 Persistent signed cookies
