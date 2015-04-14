@@ -1,8 +1,16 @@
 * Questions
 
+** How do you jump to matching delimiter?
+
+** How do you wrap a closing delimiter around the specified number of sub-delimitered content (M-4 \( ?)
+
+** How to redefine formatting rules for specific languages - Lisp & JavaScript in particular
+
 ** How do you save and exit in one command?
 
 ** For completion-cycle-threshold, is there a way to display the first complete expansion first, and then the rest of the full expansions?
+
+** Lisp syntax highlighting
 
 ** Is it possible to set emacs to kill buffers (like *Appropos* or *Buffer List*) upon pressing q?
 
