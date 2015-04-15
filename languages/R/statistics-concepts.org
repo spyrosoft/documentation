@@ -1,0 +1,263 @@
+* library(help = "stats")
+
+* Graphs
+
+** Box Plot
+
+** Stem and Leaf Plot
+
+** Histogram
+
+** Scatterplot
+
+** Bar Graph
+
+** Heat Map
+
+** Dendrogram
+
+** Two-way Interaction Plot
+
+** Quantile-Quantile Plots
+
+** Screeplots
+
+
+* Distributions
+
+** Normal Distribution
+
+** Beta Distribution
+
+** Binomial Distribution
+
+** Negative Binomial Distribution
+
+** Multinomial Distribution
+
+** Log Normal Distribution
+
+** Cauchy Distribution
+
+** Chi-Squared Distribution
+
+** Exponential Distribution
+
+** F Distribution
+
+** Gamma Distribution
+
+** Geometric Distribution
+
+** Hypergeometric Distribution
+
+** Logistic Distribution
+
+** Poisson Distribution
+
+** Student t Distribution
+
+** Studentized Range Distribution
+
+** Uniform Distribution
+
+** Weibull Distribution
+
+** Distribution of the Wilcoxon Rank Sum Statistic
+
+
+* Measurement Scales
+
+** Nominal
+
+** Ordinal
+
+** Interval
+
+** Ratio
+
+
+* Variables
+
+** Qualitative
+
+** Quantitative
+
+** Independent
+
+** Dependent
+
+** Related Strength vs Reliability
+
+
+* Spread
+
+** Range
+
+** Variance
+
+** Standard Deviation
+
+
+* Shape
+
+** Skewness
+
+** Kurtosis
+
+
+* Association
+
+** Correlation
+
+** Regression
+
+** Statistical Significance
+
+
+* Statistical Significance
+
+
+* Filtering
+
+** Holt-Winters Filtering
+
+** Kalman Filtering
+
+
+* Tests
+
+** Box-Pierce and Ljung-Box Tests
+
+** Ansari-Bradley Test
+
+** Bartlett Test of Homogeneity of Variances
+
+** Exact Binomial Test
+
+** Phillips-Perron Test for Unit Roots
+
+** Pearson's Chi-squared Test for Count Data
+
+** Friedman Rank Sum Test
+
+** Kruskal-Wallis Rank Sum Test
+
+** Kolmogorov-Smirnov Tests
+
+** Mauchly's Test of Sphericity
+
+** Fisher's Exact Test for Count Data
+
+** McNemar's Chi-squared Test for Count Data
+
+** Mood Two-Sample Test of Scale
+
+** Test for Equal Means in a One-Way Layout
+
+** Pairwise Wilcoxon Rank Sum Tests
+
+** Exact Poisson tests
+
+** One and Two Sample T Tests
+
+** Quade Test
+
+** Shapiro-Wilk Normality Test
+
+** Student's T Test
+
+** F Test to Compare Two Variances
+
+
+* Other
+
+** Interquartile Range
+
+** Asymptotic Regression Model
+
+** Fitted Model
+
+** Inverse Interpolation
+
+** Fit Structural Time Series
+
+** Tukey Honest Significant Differences
+
+** Anova Tables
+
+** Canonical Correlations
+
+** Complete Cases
+
+** Contrast Matrices
+
+** Convolution of Sequences via FFT
+
+** Cophenetic Distances
+
+** Weighted Covariance Matrices
+
+** Plot Cumulative Periodogram
+
+** Kernel Density Estimation
+
+** Time Series Objects
+
+** Discrete Integration: Inverse of Differencing
+
+** Empirical Cumulative Distribution Function
+
+** Family Objects for Models
+
+** Discrete Fourier Transform
+
+** Linear Filtering on a Time Series
+
+** Tukey Five-Number Summaries
+
+** Flat Contingency Tables
+
+** Hierarchical Clustering
+
+** Isotonic / Monotone Regression
+
+** K-Means Clustering
+
+** Lag a Time Series
+
+** Highly Composite Numbers
+
+** Non-Linear Minimization
+
+** Optimization using PORT routines
+
+** Pairwise comparisons for proportions
+
+** Plot function for HoltWinters objects
+
+** Plot Autocovariance and Autocorrelation
+
+** Orthogonal Polynomials
+
+** Power Link Object
+
+** Projection Pursuit Regression
+
+** Predict Loess Curve or Surface
+
+** Sample Quantiles
+
+** Random 2-way Tables with Given Marginals
+
+** Random Wishart Distributed Matrices
+
+** Manipulate Flat Contingency Tables
+
+** Smoothing Spline
+
+** Interpolating Splines
+
+** GLM Anova Statistics
+
+** Cross Tabulation
