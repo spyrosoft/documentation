@@ -1,0 +1,7 @@
+* List all of the built in primitives:
+all_functions <- ls( baseenv() )
+primitives <- rep( FALSE, length( all_functions ) )
+for ( i in seq( along=all_functions ) ) {
+	primitives[ i ] <- is.primitive( get( all_functions[ i ], envir=baseenv() ) )
+}
+all_functions[ primitives ]
