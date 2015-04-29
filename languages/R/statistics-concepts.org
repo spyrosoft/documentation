@@ -1,5 +1,27 @@
 * library(help = "stats")
 
+
+* Summary Statistics : sapply
+
+** mean
+
+** median
+
+** mode
+
+** sd
+
+** var
+
+** min
+
+** max
+
+** range
+
+** quantile
+
+
 * Graphs
 
 ** Box Plot
@@ -23,11 +45,224 @@
 ** Screeplots
 
 
+* Measurement Scales
+
+** Nominal
+	 Just the name that matters, e.g. what's your favorite color
+
+** Ordinal
+	 Order matters, e.g. 1st, 2nd, 3rd
+
+** Interval
+	 Any continuous measure
+
+** Ratio
+
+
+* Variables
+
+** Qualitative
+	 Anecdotal
+
+** Quantitative
+	 Numeric
+
+** Independent
+	 As in Algebra, x is independent of y
+
+** Dependent
+	 As in Algebra, y depends on x
+
+** Related Strength vs Reliability
+
+
+* Spread
+
+** Range
+
+** Variance
+
+** Standard Deviation
+
+
+* Shape
+
+** Skewness
+	 Applies to distributions
+	 Shifted normal distribution such as limiting the data to a specific trait
+
+** Kurtosis
+
+** Bimodal
+	 Two peaks of normal distribution
+
+
+* Association
+
+** Correlation
+	 Behave together as predicted
+	 Could have a negative correlation - one up, the other down
+
+** Regression
+	 Regress something "on" something else
+
+** Statistical Significance
+
+
+* Tests
+
+** T Tests
+
+** One and Two Sample T Tests
+
+** Student's T Test
+
+** F Test to Compare Two Variances
+
+** Exact Binomial Test
+
+** Mood Two-Sample Test of Scale
+
+** Test for Equal Means in a One-Way Layout
+
+** Exact Poisson tests
+
+** Quade Test
+
+** Box-Pierce and Ljung-Box Tests
+
+** Ansari-Bradley Test
+
+** Bartlett Test of Homogeneity of Variances
+
+** Phillips-Perron Test for Unit Roots
+
+** Pearson's Chi-squared Test for Count Data
+
+** Friedman Rank Sum Test
+
+** Kruskal-Wallis Rank Sum Test
+
+** Kolmogorov-Smirnov Tests
+
+** Mauchly's Test of Sphericity
+
+** Fisher's Exact Test for Count Data
+
+** McNemar's Chi-squared Test for Count Data
+
+** Pairwise Wilcoxon Rank Sum Tests
+
+** Shapiro-Wilk Normality Test
+
+
+* Filtering
+
+** Holt-Winters Filtering
+
+** Kalman Filtering
+
+
+* Other
+
+** Interquartile Range
+
+** Discrete Fourier Transform
+
+** Complete Cases
+
+** Covariance Matrices
+
+** Weighted Covariance Matrices
+
+** Empirical Cumulative Distribution Function
+
+** Hierarchical Clustering
+
+** Orthogonal Polynomials
+
+** Pairwise comparisons for proportions
+
+** Asymptotic Regression Model
+
+** Fitted Model
+
+** Inverse Interpolation
+
+** Fit Structural Time Series
+
+** Tukey Honest Significant Differences
+
+** Anova Tables
+
+** Canonical Correlations
+
+** Contrast Matrices
+
+** Convolution of Sequences via FFT
+
+** Cophenetic Distances
+
+** Plot Cumulative Periodogram
+
+** Kernel Density Estimation
+
+** Time Series Objects
+
+** Discrete Integration: Inverse of Differencing
+
+** Family Objects for Models
+
+** Linear Filtering on a Time Series
+
+** Tukey Five-Number Summaries
+
+** Flat Contingency Tables
+
+** Isotonic / Monotone Regression
+
+** K-Means Clustering
+
+** Lag a Time Series
+
+** Highly Composite Numbers
+
+** Non-Linear Minimization
+
+** Optimization using PORT routines
+
+** Plot function for HoltWinters objects
+
+** Plot Autocovariance and Autocorrelation
+
+** Power Link Object
+
+** Projection Pursuit Regression
+
+** Predict Loess Curve or Surface
+
+** Sample Quantiles
+
+** Random 2-way Tables with Given Marginals
+
+** Random Wishart Distributed Matrices
+
+** Manipulate Flat Contingency Tables
+
+** Smoothing Spline
+
+** Interpolating Splines
+
+** GLM Anova Statistics
+
+** Cross Tabulation
+
+
 * Distributions
 
 ** Normal Distribution
 
-** Beta Distribution
+** Chi-Squared Distribution
 
 ** Binomial Distribution
 
@@ -38,8 +273,6 @@
 ** Log Normal Distribution
 
 ** Cauchy Distribution
-
-** Chi-Squared Distribution
 
 ** Exponential Distribution
 
@@ -65,199 +298,4 @@
 
 ** Distribution of the Wilcoxon Rank Sum Statistic
 
-
-* Measurement Scales
-
-** Nominal
-
-** Ordinal
-
-** Interval
-
-** Ratio
-
-
-* Variables
-
-** Qualitative
-
-** Quantitative
-
-** Independent
-
-** Dependent
-
-** Related Strength vs Reliability
-
-
-* Spread
-
-** Range
-
-** Variance
-
-** Standard Deviation
-
-
-* Shape
-
-** Skewness
-
-** Kurtosis
-
-
-* Association
-
-** Correlation
-
-** Regression
-
-** Statistical Significance
-
-
-* Statistical Significance
-
-
-* Filtering
-
-** Holt-Winters Filtering
-
-** Kalman Filtering
-
-
-* Tests
-
-** Box-Pierce and Ljung-Box Tests
-
-** Ansari-Bradley Test
-
-** Bartlett Test of Homogeneity of Variances
-
-** Exact Binomial Test
-
-** Phillips-Perron Test for Unit Roots
-
-** Pearson's Chi-squared Test for Count Data
-
-** Friedman Rank Sum Test
-
-** Kruskal-Wallis Rank Sum Test
-
-** Kolmogorov-Smirnov Tests
-
-** Mauchly's Test of Sphericity
-
-** Fisher's Exact Test for Count Data
-
-** McNemar's Chi-squared Test for Count Data
-
-** Mood Two-Sample Test of Scale
-
-** Test for Equal Means in a One-Way Layout
-
-** Pairwise Wilcoxon Rank Sum Tests
-
-** Exact Poisson tests
-
-** One and Two Sample T Tests
-
-** Quade Test
-
-** Shapiro-Wilk Normality Test
-
-** Student's T Test
-
-** F Test to Compare Two Variances
-
-
-* Other
-
-** Interquartile Range
-
-** Asymptotic Regression Model
-
-** Fitted Model
-
-** Inverse Interpolation
-
-** Fit Structural Time Series
-
-** Tukey Honest Significant Differences
-
-** Anova Tables
-
-** Canonical Correlations
-
-** Complete Cases
-
-** Contrast Matrices
-
-** Convolution of Sequences via FFT
-
-** Cophenetic Distances
-
-** Weighted Covariance Matrices
-
-** Plot Cumulative Periodogram
-
-** Kernel Density Estimation
-
-** Time Series Objects
-
-** Discrete Integration: Inverse of Differencing
-
-** Empirical Cumulative Distribution Function
-
-** Family Objects for Models
-
-** Discrete Fourier Transform
-
-** Linear Filtering on a Time Series
-
-** Tukey Five-Number Summaries
-
-** Flat Contingency Tables
-
-** Hierarchical Clustering
-
-** Isotonic / Monotone Regression
-
-** K-Means Clustering
-
-** Lag a Time Series
-
-** Highly Composite Numbers
-
-** Non-Linear Minimization
-
-** Optimization using PORT routines
-
-** Pairwise comparisons for proportions
-
-** Plot function for HoltWinters objects
-
-** Plot Autocovariance and Autocorrelation
-
-** Orthogonal Polynomials
-
-** Power Link Object
-
-** Projection Pursuit Regression
-
-** Predict Loess Curve or Surface
-
-** Sample Quantiles
-
-** Random 2-way Tables with Given Marginals
-
-** Random Wishart Distributed Matrices
-
-** Manipulate Flat Contingency Tables
-
-** Smoothing Spline
-
-** Interpolating Splines
-
-** GLM Anova Statistics
-
-** Cross Tabulation
+** Beta Distribution
