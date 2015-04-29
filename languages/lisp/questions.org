@@ -1,0 +1,9 @@
+* Questions
+
+** The spec refers to the ability to make arrays vs simple-arrays. A quick test in SBCL seems to only use simple-arrays. Is there a way to use not-simple-arrays?
+(setq test-array (make-array '(4)))
+(aref test-array 4)
+
+
+* Answers
+
