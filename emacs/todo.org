@@ -18,6 +18,9 @@
 
 ** Research recursive editing mode
 
+** Look through the autocomplete extensions for a good one:
+	 http://www.emacswiki.org/emacs/AutoComplete
+
 ** Find out about emacs package managers
 
 ** Find a way to jump to function definition

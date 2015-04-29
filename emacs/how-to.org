@@ -8,6 +8,8 @@
 
 ** How do you save and exit in one command?
 
+** Mark paragraph from first non-newline to all trailing newlines?
+
 ** For completion-cycle-threshold, is there a way to display the first complete expansion first, and then the rest of the full expansions?
 
 ** Lisp syntax highlighting
