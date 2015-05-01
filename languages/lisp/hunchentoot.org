@@ -1,3 +1,31 @@
+* From Scratch Set Up (CentOS 6)
+
+** yum update && yum upgrade
+
+** yum install epel-release
+
+** yum install zsh emacs screen git fail2ban haproxy sbcl
+
+** .zshrc
+
+** .emacs
+
+** configure port knocking
+
+** configure haproxy to forward traffic from port 80 to 8080
+	 Should be getting a 500 error at this point
+
+** adduser firefractal
+
+** quicklisp under firefractal
+	 https://beta.quicklisp.org/quicklisp.lisp
+
+** hunchentoot under firefractal
+	 quicklisp/dists/quicklisp/software/cl+ssl-*-git/reload.lisp
+	 The version number for libssl is usually wrong:
+	 /lib/libssl.so.6
+
+
 * Running Hunchentoot as a Non-Privileged User
 
 ** Port 80 is not available to non-privileged users
@@ -21,10 +49,10 @@
 
 (defvar REPLACE-ME-SERVER
 	(make-instance 'hunchentoot:easy-acceptor
-		:document-root "~/hunchentoot/"
-		:error-template-directory "~path/to/error/template/directory/" ; As of this moment, this doesn't seem to do anything...
-		:access-log-destination "~path/to/access/log/directory/access.log"
-		:message-log-destination "~path/to/message/log/directory/message.log"
+		:document-root "."
+		:error-template-directory "path/to/error/template/directory/" ; As of this moment, this doesn't seem to do anything...
+		:access-log-destination "path/to/access/log/directory/access.log"
+		:message-log-destination "path/to/message/log/directory/message.log"
 		:port 8080 ; This port needs to be available for this to work - change it if need be
 	))
 
@@ -40,7 +68,7 @@
 	(REPLACE-ME-SERVER-START)
 	(REPLACE-ME-SERVER-STOP))
 
-(load "~path/to/site.lisp")
+(load "path/to/site.lisp")
 
 
 * Demos
