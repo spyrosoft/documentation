@@ -4,9 +4,10 @@
 
 ** yum install epel-release
 
-** yum install zsh emacs screen git fail2ban haproxy sbcl
+** yum install zsh emacs screen git haproxy sbcl
 
 ** .zshrc
+	 tail /var/log/secure | grep FAILED
 
 ** .emacs
 
