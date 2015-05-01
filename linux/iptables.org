@@ -1,3 +1,12 @@
+* Restore Rules On Boot
+
+** CentOS
+	 service iptables save
+
+** Arch
+	 /etc/iptables/iptables.rules
+
+
 * Port Knocking
 # Accept all traffic
 iptables -P INPUT ACCEPT
@@ -67,8 +76,3 @@ http://www.cyberciti.biz/faq/linux-port-redirection-with-iptables/
 http://stackoverflow.com/questions/10727443/how-to-use-iptables-in-linux-to-forward-http-and-https-traffic-to-a-transparent
 http://forum.slicehost.com/index.php?p=/discussion/2497/iptables-redirect-port-80-to-port-8080/p1
 http://www.fclose.com/816/port-forwarding-using-iptables/
-
-
-* Commands
-
-** 
