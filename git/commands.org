@@ -4,6 +4,13 @@
 	 git ls-tree -r -z --name-only HEAD -- * | xargs -0 -n1 git blame --line-porcelain HEAD | grep "^author " | sort | uniq -c | sort -nr
 
 
+* submodule
+
+** Add a git repository as a subdirectory to an existing git repository
+	 cd directory/for/additional/repository
+	 git submodule add https://github.com/username/repository-name.git
+
+
 * rebase
 
 ** Rebase only the commits which you want to keep from four commits ago on
