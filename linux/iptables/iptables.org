@@ -34,7 +34,7 @@ iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 iptables -A INPUT -j KNOCKING
 
 # Set GATE1 to listen on the specified port, set the AUTH1 flag for the user's IP address using the Recent Module (-m recent), and drop the packet to prevent it from revealing itself as part of the knocking sequence
-iptables -A GATE1 -p tcp --dport 9534 -m recent --name AUTH1 --set -j DROP
+iptables -A GATE1 -p tcp --dport 1111 -m recent --name AUTH1 --set -j DROP
 # For all other cases, just drop the packet
 iptables -A GATE1 -j DROP
 
@@ -42,13 +42,13 @@ iptables -A GATE1 -j DROP
 # Note that this does not stop further rules from 
 iptables -A GATE2 -m recent --name AUTH1 --remove
 # Set AUTH2 in the same way as was done for AUTH1
-iptables -A GATE2 -p tcp --dport 8675 -m recent --name AUTH2 --set -j DROP
+iptables -A GATE2 -p tcp --dport 2222 -m recent --name AUTH2 --set -j DROP
 # Jump to the GATE1 chain in case the knock sequence is starting over again
 iptables -A GATE2 -j GATE1
 
 # Set GATE3 in the same way as GATE2
 iptables -A GATE3 -m recent --name AUTH2 --remove
-iptables -A GATE3 -p tcp --dport 6982 -m recent --name AUTH3 --set -j DROP
+iptables -A GATE3 -p tcp --dport 3333 -m recent --name AUTH3 --set -j DROP
 iptables -A GATE3 -j GATE1
 
 iptables -A PASSED -m recent --name AUTH3 --remove
