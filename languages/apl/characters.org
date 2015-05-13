@@ -1,0 +1,22 @@
+⍴⍳×÷⌊⌈¨∘∼
+
+* Math
+** Times
+	 ×
+** Divide
+	 ÷
+** Floor
+	 ⌊
+** Ceiling
+	 ⌈
+** Not
+	 ∼
+* Range
+** 1:n (iota)
+	 ⍳
+** 
+* Operators
+** Apply across the following
+	 ¨
+** Jot
+	 ∘
