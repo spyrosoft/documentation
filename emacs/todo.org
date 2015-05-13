@@ -1,5 +1,11 @@
 * Todo
 
+** Set M-k to quit emacs and M-q to save and quit
+
+** vim/emacs cheat sheet of freezing hell
+
+** http://whattheemacsd.com/
+
 ** M-x customize-browse
 	 Files > Dired
 
