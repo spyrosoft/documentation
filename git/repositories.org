@@ -14,18 +14,17 @@
 
 ** Set up a new remote repository on a git server
    ssh user@git.example.com
-	 mkdir git/repository-name
 	 cd git
    git init --bare repository-name.git
-   exit
+	 
+   #Locally
    cd directory/to/commit
    git init
    touch README.md
    git add .
    git commit -m 'An actual commit message.'
-   git remote add origin ssh://user@git.example.com/~/git/repository-name.git
-   git push origin master
-   git branch --set-upstream master origin/master
+   git remote add origin user@git.example.com:git/repository-name.git
+   git push -u origin master
 
 
 * Github
