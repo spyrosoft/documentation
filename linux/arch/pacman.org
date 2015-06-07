@@ -10,6 +10,9 @@
 ** Locate orphaned packages
 	 pacman -Qdt
 
+** Clear the pacman cache
+	 pacman -Sc
+
 
 * Common Commands
 
