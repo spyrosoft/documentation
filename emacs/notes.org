@@ -385,6 +385,9 @@
 ** Switch to a split (C-u to move more than one - includes minibuffer)
    C-x o
 
+** Close a split window
+	 M-x delete-window
+
 ** Navigate to previously viewed buffer
    C-x <LEFT>/<RIGHT>
 
