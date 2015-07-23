@@ -1,15 +1,15 @@
 * Todo
 
-** Set M-k to quit emacs and M-q to save and quit
-
-** vim/emacs cheat sheet of freezing hell
-
-** http://whattheemacsd.com/
-
 ** M-x customize-browse
 	 Files > Dired
 
-** Read through the FAQ
+** Find a way to jump to function definition
+
+** What major/minor modes did I miss?
+
+** Find !yt videos regarding tags
+
+** Don't forget about Autotyping (Top in Info under Emacs)
 
 ** Identify how to map hippie expand to tab if the line is already indented
 	 http://www.emacswiki.org/emacs/TabCompletion
@@ -20,6 +20,8 @@
 
 ** Figure out how to make vc filesets
 
+** Find !yt videos regarding the speedbar
+
 ** Set up mail to see if it is useful (See 32)
 
 ** Research recursive editing mode
@@ -29,37 +31,20 @@
 
 ** Find out about emacs package managers
 
-** Find a way to jump to function definition
-
-** Find a way to make tab autocomplete inline code. It would never make sense for tab to be pressed except at the beginning of the line.
-
-** Figure out how to prevent the deletion of tabs on lines which only contain tabs
-
-** Look through the emacs gui settings interface
-
-** Look through the emacs gui context menu
-
 ** Find !yt video or other resource on how to use timeclock
 
 ** Map out the combination of all keys and what they do (vanilla emacs) in a table 2 wide x # tall
 
-** What major/minor modes did I miss?
-
 ** What commands does C-u affect?
-
-** Find !yt videos regarding the speedbar
-
-** Find !yt videos regarding tags
-
-** Don't forget about Autotyping (Top in Info under Emacs)
 
 ** Find out what dynamic completion mode is for
 
 ** Find out what f2 is for
 
-** Find out what tags are for
-
 ** Figure out how the C-x 6 commands work (two columns e.g. 2C-split)
+
+** http://whattheemacsd.com/
+
 
 
 * Hooks to Utilize
@@ -70,7 +55,22 @@
 	 rainbow-delimiters
 
 
+* Never Mind
+
+** Find a way to make tab autocomplete inline code. It would never make sense for tab to be pressed except at the beginning of the line.
+	 M-/ is fine - it's even easier to reach
+
+
 * Done
 
 ** C-h b
+
+** Set M-k to quit emacs and M-q to save and quit
+
+** vim/emacs cheat sheet of freezing hell
+
+** Read through the FAQ
+
+** Figure out how to prevent the deletion of tabs on lines which only contain tabs
+	 Actually, if you start typing code on the line, it will indent itself properly
 
