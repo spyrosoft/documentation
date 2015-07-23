@@ -1,0 +1,4 @@
+* Stop error message "vboxclient: the virtualbox kernel service is not running. exiting"
+	su -
+	cd /etc/xdg/autostart
+	mv vboxclient.desktop /root
