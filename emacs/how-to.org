@@ -12,18 +12,11 @@
 
 ** Copy text from point to end of line
 
-** Increment and decrement number at point
-   http://www.emacswiki.org/emacs/IncrementNumber
-
 ** How do you commit multiple files at once? Dired? (git)
 
 ** How do you enter recursive editing mode?
 
-** How do you delete an active region when a character is inserted?
-
 ** Are registers permanent?
-
-** Is there a way to transpose the current line and the line above rather than the two lines above?
 
 ** Abbreviations expand without pressing space?
 
@@ -37,15 +30,9 @@
 
 ** Is there a technique for visually customizing the color theme?
 
-** Is there a way to drag a region of lines around like you do with C-x C-t?
-
-** Display full file path of current file
-
 ** Electric pair mode only if the next character is whitespace?
 
 ** What are smerge, emerge, diff and ediff (18.10 - Files)?
-
-** Is there a way to make the screen flash less contrasty?
 
 ** Is there a way to change from flattened undo history to tree history?
 
@@ -171,4 +158,22 @@
 
 ** Lisp syntax highlighting
 	 Not sure what this is referring to - maybe that function calls and variables are the same color - that's because they are both symbols and should be the same color
+
+** How do you delete an active region when a character is inserted?
+	 (custom-set-variables '(delete-selection-mode t))
+
+** Increment and decrement number at point
+   http://www.emacswiki.org/emacs/IncrementNumber
+
+** Is there a way to transpose the current line and the line above rather than the two lines above?
+	 http://www.emacswiki.org/emacs/MoveLine
+
+** Is there a way to drag a region of lines around like you do with C-x C-t?
+	 http://www.emacswiki.org/emacs/MoveLine
+
+** Display full file path of current file
+	 See the Custom Functions section of my .emacs config file:
+	 https://github.com/spyrosoft/dotfiles/blob/master/.emacs
+
+** Is there a way to make the screen flash less contrasty?
 
