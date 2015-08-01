@@ -1,0 +1,56 @@
+# Note: comments are preceded by the # symbol
+
+fdisk /dev/sda
+
+# Create new partition
+n
+
+# Default partition number (1)
+<enter>
+
+# Default partition type (primary)
+<enter>
+
+# Default first sector
+<enter>
+
+# Choose how large you want your first partition (root partition) to be
++16G
+
+# Create new partition
+n
+
+# Default partition type (primary)
+<enter>
+
+# Default partition number (2)
+<enter>
+
+# Default first sector
+<enter>
+
+# The rest minus ~64M (last sector 41943039-135000=41808039)
+41808039
+
+# Create a new partition
+n
+
+# Default partition type (primary)
+<enter>
+
+# Default partition number (3)
+<enter>
+
+# Default first sector
+<enter>
+
+# Default last sector
+<enter>
+
+# Write partition table and exit (this will erase the hard drive)
+w
+
+# Make the filesystem for each of the partitions
+mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda2
+mkfs.ext4 /dev/sda3
