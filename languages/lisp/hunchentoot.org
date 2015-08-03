@@ -86,3 +86,37 @@
 
 ** https://github.com/orivej/ht-session
 	 Persistent signed cookies
+
+
+* Starting Hunchentoot at Boot
+
+** /usr/lib/systemd/system/firefractal.service
+[Unit]
+Description=Hunchentoot server for firefractal.com
+After=haproxy.service
+
+[Service]
+ExecStart=/bin/sudo -u firefractal /bin/screen -dmS firefractal zsh -c "source ~/.zshrc; sbcl --load init.lisp; exec zsh"
+ExecStop=/bin/true
+
+[Install]
+WantedBy=multi-user.target
+
+*** /bin/sudo -u firefractal
+		This runs the following command as the firefractal user rather than root
+
+*** /bin/screen -dmS firefractal
+		Screen is executed in a detached state via the -d and -m flags
+		The screen which is created is named `firefractal' via the -S flag
+
+*** zsh -c
+		The following command in quotes is executed using zsh
+
+*** source ~/.zshrc
+		The user's zshrc file is not sourced automatically when zsh is initialized via screen
+
+*** sbcl --load init.lisp
+		This runs the Hunchentoot server
+
+*** exec zsh
+		This is required at the end in order for the screen session to remain active
