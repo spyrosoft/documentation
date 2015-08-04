@@ -88,6 +88,9 @@
 ** Simulate pressing tab on all lines in region, even if region is inactive (C-u to indent multiple times)
    C-M-\
 
+** Count lines, words, and characters in the current region
+	 M-=
+
 
 * Rectangle Regions
 
