@@ -4,27 +4,33 @@
 
 ** For completion-cycle-threshold, is there a way to display the first complete expansion first, and then the rest of the full expansions?
 
+** Is there a way to bind backtab to cycle backwards through completion-cycle-threshold?
+
 ** Yank and keep point where it is
 
 ** Insert characters and keep point where it is
 
-** Copy text from point to end of line
+** How to reverse search immedately rather than redisplaying the current result?
 
-** How do you commit multiple files at once? Dired? (git)
+** Copy text from point to end of line without deleting it
 
-** How do you enter recursive editing mode?
+** Is there a way to change from flattened undo history to tree history?
 
 ** Are registers permanent?
 
-** Abbreviations expand without pressing space?
+** What is the best way to set a rectangular region around one column and the absolute right-most portion of the buffer?
 
-** How to reverse search immedately rather than redisplaying the current result?
+** How do you enter recursive editing mode?
+
+** How do you commit multiple files at once? Dired? (git)
+
+** Abbreviations expand without pressing space?
 
 ** How do you customize what delimiters to use in org mode? (See 25.8.1 Format of Outlines)
 
-** What is the best way to set a rectangular region around one column and the absolute right-most portion of the buffer?
-
 ** How do you delete all whitespace around point?
+
+** Is there a way to edit documents on a remote server with a locally running version of emacs?
 
 ** Is there a method of displaying version control local changes in dired?
 
@@ -34,11 +40,7 @@
 
 ** What are smerge, emerge, diff and ediff (18.10 - Files)?
 
-** Is there a way to change from flattened undo history to tree history?
-
 ** What is the pattern of M & C strokes?
-
-** Is there a way to edit documents on a remote server with a locally running version of emacs?
 
 ** Is there a way to move regions up and down?
 
