@@ -22,9 +22,6 @@
 	 https://beta.quicklisp.org/quicklisp.lisp
 
 ** hunchentoot under firefractal
-	 quicklisp/dists/quicklisp/software/cl+ssl-*-git/reload.lisp
-	 The version number for libssl is usually wrong:
-	 /lib/libssl.so.6
 
 
 * Running Hunchentoot as a Non-Privileged User
