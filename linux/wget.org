@@ -1,0 +1,10 @@
+~ Commands
+
+* Download an entire website
+wget \
+--tries 3 \
+--recursive \
+--level=99 \
+--convert-links \
+--page-requisites \
+--show-progress
