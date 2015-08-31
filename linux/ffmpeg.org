@@ -1,0 +1,2 @@
+* Record a screen capture video:
+ffmpeg -f x11grab -s wxga -r 25 -i :0.0 -s 800x450 -qscale 0 /tmp/out.mpg
