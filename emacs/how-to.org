@@ -16,8 +16,6 @@
 
 ** Is there a way to change from flattened undo history to tree history?
 
-** Are registers permanent?
-
 ** What is the best way to set a rectangular region around one column and the absolute right-most portion of the buffer?
 
 ** How do you enter recursive editing mode?
@@ -27,8 +25,6 @@
 ** Abbreviations expand without pressing space?
 
 ** How do you customize what delimiters to use in org mode? (See 25.8.1 Format of Outlines)
-
-** Is there a way to edit documents on a remote server with a locally running version of emacs?
 
 ** Is there a method of displaying version control local changes in dired?
 
@@ -185,4 +181,14 @@
 
 ** How do you delete all whitespace around point?
 	 M-SPC is by default set to delete all but one space utilizing the `cycle-spacing' function, which has a parameter that can be set to 0
+
+** Are registers permanent?
+	 Nope... D:
+
+** Is there a way to edit documents on a remote server with a locally running version of emacs?
+	 Yes - it's built in and is called tramp, but tramp doesn't play nice with ZSH apparently (see the Emacs wiki page for tramp)
+	 May as well just mount the remote system locally and edit the files that way:
+	 mkdir /tmp/spyrosoft.com && sshfs spyrosoft@spyrosoft.com: /tmp/spyrosoft.com
+	 Unmount it again with:
+	 fusermount -u /tmp/spyrosoft.com
 
