@@ -1,0 +1,9 @@
+* Remove the Archives directory and disable the A key from accidentally archiving emails
+	Right Click on an account > Settings > Copies and Folders > Message Archives > Keep message Archives In (Uncheck)
+
+* Disable word wrapping in outgoing messages
+	Edit > Preferences > Advanced > General > Config Editor
+	"mail.wrap_long_lines" > false
+
+* Open thunderbird profile manager
+	thunderbird -profilemanager
