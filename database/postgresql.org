@@ -1,19 +1,28 @@
 * Shell Commands
 
 ** Load a database
+	 (shell)
 	 psql DATABASE
 
 
 * PostgreSQL Commands
 
 ** Show databases
+	 (psql)
 	 \l
 
 ** Show tables (Show Size and Description with \d+)
+	 (psql)
 	 \d
 
 ** Show columns
+	 (psql)
 	 \d TABLE
 
 ** Describe table
+	 (psql)
 	 \d+ table
+
+** Create a database
+	 (shell)
+	 createdb DBNAME
