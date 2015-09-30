@@ -1,0 +1,3 @@
+* HTTPS Admin Login
+	wp-config.php
+	define('FORCE_SSL_ADMIN', true);
