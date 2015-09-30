@@ -1,0 +1,69 @@
+* KnockKnock by Moxie Marlinspike
+
+Source: http://www.thoughtcrime.org/software/knockknock/
+
+
+
+
+
+
+* Naive Method
+
+# Accept all traffic
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+
+# Remove all existing rules
+iptables -F
+
+# Create knocking chains
+iptables -N KNOCKING
+iptables -N GATE1
+iptables -N GATE2
+iptables -N GATE3
+iptables -N PASSED
+
+# Any existing connections should remain operational no matter what other rules are apllied
+iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+# Loopback traffic should just work
+iptables -A INPUT -i lo -j ACCEPT
+# Port 80 is the only port that should be open to the world
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+
+# All other traffic is sent to the KNOCKING chain
+iptables -A INPUT -j KNOCKING
+
+# Set GATE1 to listen on the specified port, set the AUTH1 flag for the user's IP address using the Recent Module (-m recent), and drop the packet to prevent it from revealing itself as part of the knocking sequence
+iptables -A GATE1 -p tcp --dport 1111 -m recent --name AUTH1 --set -j DROP
+# For all other cases, just drop the packet
+iptables -A GATE1 -j DROP
+
+# Remove the AUTH1 flag via the Recent Module (-m recent) to prevent successful entry just by scanning the ports three times
+# Note that this does not stop further rules from 
+iptables -A GATE2 -m recent --name AUTH1 --remove
+# Set AUTH2 in the same way as was done for AUTH1
+iptables -A GATE2 -p tcp --dport 2222 -m recent --name AUTH2 --set -j DROP
+# Jump to the GATE1 chain in case the knock sequence is starting over again
+iptables -A GATE2 -j GATE1
+
+# Set GATE3 in the same way as GATE2
+iptables -A GATE3 -m recent --name AUTH2 --remove
+iptables -A GATE3 -p tcp --dport 3333 -m recent --name AUTH3 --set -j DROP
+iptables -A GATE3 -j GATE1
+
+iptables -A PASSED -m recent --name AUTH3 --remove
+# Finally, open port 22 to the users who have knocked correctly
+iptables -A PASSED -p tcp --dport 22 -j ACCEPT
+iptables -A PASSED -j GATE1
+
+# Close the port 22 connection window after the specified number of seconds
+iptables -A KNOCKING -m recent --rcheck --seconds 60 --name AUTH3 -j PASSED
+# Only wait 10 seconds for each sequential knock
+iptables -A KNOCKING -m recent --rcheck --seconds 30 --name AUTH2 -j GATE3
+iptables -A KNOCKING -m recent --rcheck --seconds 30 --name AUTH1 -j GATE2
+
+# Send all initial traffic to the knocking sequence
+iptables -A KNOCKING -j GATE1
+
+Source: https://www.digitalocean.com/community/tutorials/how-to-configure-port-knocking-using-only-iptables-on-an-ubuntu-vps
