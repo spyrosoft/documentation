@@ -1,7 +1,20 @@
+* Commands
+
+** Delete rules
+iptables --flush [optional chain]
+
+** Delete a chain
+iptables --delete-chain [chain]
+
+** Dump the current settings to stdout
+iptables-save
+
+
 * Restore Rules On Boot
 
 ** CentOS
 	 service iptables save
+	 /etc/sysconfig/iptables
 
 ** Arch
 	 /etc/iptables/iptables.rules
