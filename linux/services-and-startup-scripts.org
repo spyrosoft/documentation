@@ -1,0 +1,31 @@
+systemctl
+
+* User made startup services belong in
+/etc/systemd/system
+
+* System startup services are found in
+/usr/lib/systemd/system
+
+* Creating a daemon process
+
+[Unit]
+Description=Example Human Readable Description
+After=syslog.target network.target example.service
+
+[Service]
+ExecStart=/path/to/executable/binary-file-name
+ExecStop=/usr/bin/kallall binary-file-name
+Type=forking
+GuessMainPID=no
+
+[Install]
+WantedBy=multi-user.target
+
+** After=...
+	 Specify space delimited services that this service depends on
+
+** Type=forking
+	 The Type setting (set to forking as opposed to the default: simple) forks a child, kills the parent, and allows the child to continue running as a daemon
+
+** GuessMainPID=no
+	 By default, systemd will try to identify process ID that is created - if more than one child process is created, this causes issues, so we set it to `no', and find an alternative method of stopping the process (such as using killall)
