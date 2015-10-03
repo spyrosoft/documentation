@@ -1,69 +1,71 @@
-* KnockKnock by Moxie Marlinspike
+KnockKnock by Moxie Marlinspike
 
 Source: http://www.thoughtcrime.org/software/knockknock/
 
+* CentOS7 doesn't use kern.log as is expected in knockknock
+
+** Change the file name in knockknock to /etc/rsyslog.d/00-iptables.log and run the installation
+
+** Place the following in /etc/rsyslog.d/00-iptables.log
+:msg,contains,"REJECT " -/var/log/iptables.log
+
+** Now restart rsyslog to start using the new settings
+systemctl restart rsyslog.service
+
+* Run knockknock-genprofile as specified
+
+* Copy /etc/knockknock.d/profiles/new-profile to your local machine as described in the documentation
+
+* Remove all chains and rules from iptables (TEMPORARILY) and save them, so you can power cycle your server if you get locked out - and save them
+(CentOS)
+service iptables save
+(Other - find where the iptables config file is and write over it with the new rules - here are two examples)
+iptables-save > /etc/sysconfig/iptables
+iptables-save > /etc/iptables/iptables.rules
+
+* Run the following script to configure iptables (or do it yourself - notice that my settings are different than the documentation's - I need the loopback interface to work)
+https://github.com/spyrosoft/shell-scripts/blob/master/configure-knockknock
+
+* Enable the daemon on startup (or you will lock yourself out of your server once the knockknock iptables rules are in place), which is oddly nowhere to be found in the documentation
+(systemd: write the following to /etc/systemd/system/knockknock.service)
+[Unit]
+Description=Knock Knock Daemon
+After=syslog.target network.target iptables.service
+
+[Service]
+ExecStart=/usr/bin/knockknock-daemon
+ExecStop=/usr/bin/kallall knockknock-daemon
+Type=forking
+GuessMainPID=no
+
+[Install]
+WantedBy=multi-user.target
+
+* TEST THIS
+(server)
+systemctl start knockknock.service
+systemctl status knockknock.service
+(make sure it's running and everything's good)
+(local)
+ssh root@example.com
+(if you can't get in, something is horribly wrong - power cycle your server to get back in and fix it before you continue any farther)
+(server)
+reboot
+(local)
+ssh root@example.com
+(server)
+systemctl status knockknock.service
+(make sure it's running and everything's good)
+
+* Now that we know that knockknock.service works on boot, run the configure-knockknock script again, and this time save iptables to disk
+service iptables save
+(or the other way mentioned above)
+
+* Reboot the server and log back in - now you're using knockknock - yay
 
 
 
 
+Naive Port Knocking
 
-* Naive Method
-
-# Accept all traffic
-iptables -P INPUT ACCEPT
-iptables -P FORWARD ACCEPT
-iptables -P OUTPUT ACCEPT
-
-# Remove all existing rules
-iptables -F
-
-# Create knocking chains
-iptables -N KNOCKING
-iptables -N GATE1
-iptables -N GATE2
-iptables -N GATE3
-iptables -N PASSED
-
-# Any existing connections should remain operational no matter what other rules are apllied
-iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
-# Loopback traffic should just work
-iptables -A INPUT -i lo -j ACCEPT
-# Port 80 is the only port that should be open to the world
-iptables -A INPUT -p tcp --dport 80 -j ACCEPT
-
-# All other traffic is sent to the KNOCKING chain
-iptables -A INPUT -j KNOCKING
-
-# Set GATE1 to listen on the specified port, set the AUTH1 flag for the user's IP address using the Recent Module (-m recent), and drop the packet to prevent it from revealing itself as part of the knocking sequence
-iptables -A GATE1 -p tcp --dport 1111 -m recent --name AUTH1 --set -j DROP
-# For all other cases, just drop the packet
-iptables -A GATE1 -j DROP
-
-# Remove the AUTH1 flag via the Recent Module (-m recent) to prevent successful entry just by scanning the ports three times
-# Note that this does not stop further rules from 
-iptables -A GATE2 -m recent --name AUTH1 --remove
-# Set AUTH2 in the same way as was done for AUTH1
-iptables -A GATE2 -p tcp --dport 2222 -m recent --name AUTH2 --set -j DROP
-# Jump to the GATE1 chain in case the knock sequence is starting over again
-iptables -A GATE2 -j GATE1
-
-# Set GATE3 in the same way as GATE2
-iptables -A GATE3 -m recent --name AUTH2 --remove
-iptables -A GATE3 -p tcp --dport 3333 -m recent --name AUTH3 --set -j DROP
-iptables -A GATE3 -j GATE1
-
-iptables -A PASSED -m recent --name AUTH3 --remove
-# Finally, open port 22 to the users who have knocked correctly
-iptables -A PASSED -p tcp --dport 22 -j ACCEPT
-iptables -A PASSED -j GATE1
-
-# Close the port 22 connection window after the specified number of seconds
-iptables -A KNOCKING -m recent --rcheck --seconds 60 --name AUTH3 -j PASSED
-# Only wait 10 seconds for each sequential knock
-iptables -A KNOCKING -m recent --rcheck --seconds 30 --name AUTH2 -j GATE3
-iptables -A KNOCKING -m recent --rcheck --seconds 30 --name AUTH1 -j GATE2
-
-# Send all initial traffic to the knocking sequence
-iptables -A KNOCKING -j GATE1
-
-Source: https://www.digitalocean.com/community/tutorials/how-to-configure-port-knocking-using-only-iptables-on-an-ubuntu-vps
+https://github.com/spyrosoft/shell-scripts/blob/master/configure-port-knocking
