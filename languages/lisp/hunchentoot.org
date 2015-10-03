@@ -87,24 +87,15 @@
 
 * Starting Hunchentoot at Boot
 
-** /usr/lib/systemd/system/firefractal.service
-[Unit]
-Description=Hunchentoot server for firefractal.com
-After=haproxy.service
+** See linux/services-and-startup-scripts.org
+ExecStart=/bin/sudo -u exampleuser /bin/screen -dmS exampleuser zsh -c "source ~/.zshrc; sbcl --load init.lisp; exec zsh"
 
-[Service]
-ExecStart=/bin/sudo -u firefractal /bin/screen -dmS firefractal zsh -c "source ~/.zshrc; sbcl --load init.lisp; exec zsh"
-ExecStop=/bin/true
+*** /bin/sudo -u exampleuser
+		This runs the following command as the exampleuser user rather than root
 
-[Install]
-WantedBy=multi-user.target
-
-*** /bin/sudo -u firefractal
-		This runs the following command as the firefractal user rather than root
-
-*** /bin/screen -dmS firefractal
+*** /bin/screen -dmS exampleuser
 		Screen is executed in a detached state via the -d and -m flags
-		The screen which is created is named `firefractal' via the -S flag
+		The screen which is created is named `exampleuser' via the -S flag
 
 *** zsh -c
 		The following command in quotes is executed using zsh
