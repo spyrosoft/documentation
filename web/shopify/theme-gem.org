@@ -1,0 +1,23 @@
+* Installation
+gem install shopify_theme
+
+
+* Configuration
+
+** Off the bat, use the sweet bootstrap command - this provides you with the Timber framework:
+theme bootstrap api_key password store "Theme Name" --version=latest
+
+
+* Commands
+
+** Listen for changes on any file and sync with the server
+theme watch
+
+** Upload a single file
+theme upload path/to/file
+
+** Delete a single file
+theme remove path/to/file
+
+** Download all files from the server
+theme download
