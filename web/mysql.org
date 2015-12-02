@@ -1,0 +1,74 @@
+* Calculate largest tables
+** Source: http://www.mysqlperformanceblog.com/2008/02/04/finding-out-largest-tables-on-mysql-server/
+SELECT CONCAT(table_schema, '.', table_name),
+CONCAT(ROUND(table_rows / 1000000, 2), 'M') rows,
+CONCAT(ROUND(data_length / ( 1024 * 1024 * 1024 ), 2), 'G') DATA,
+CONCAT(ROUND(index_length / ( 1024 * 1024 * 1024 ), 2), 'G') idx,
+CONCAT(ROUND(( data_length + index_length ) / ( 1024 * 1024 * 1024 ), 2), 'G') total_size,
+ROUND(index_length / data_length, 2) idxfrac
+FROM information_schema.TABLES
+ORDER BY data_length + index_length DESC
+LIMIT 10;
+
+* Store IP Addresses
+`ip_address` INT(10) UNSIGNED NOT NULL
+INET_NTOA(2147483647)
+INET_ATON('127.255.255.255')
+
+* Integer Ranges (unsigned)
+tinyint: 0 - 255
+smallint: 0 - 65535
+mediumint: 0 - 16777215
+int: 0 - 4294967295
+bigint: 0 - 18446744073709551615
+
+* Change the first letter of every entry in a column to upper case
+UPDATE `table` SET `column` = CONCAT(UCASE(LEFT(`column`, 1)), SUBSTRING(`column`, 2));
+
+* Export Human Readable Database
+mysqldump --skip-extended-insert
+
+* Copy Rows
+INSERT INTO `table` (`column1`, `column2`) SELECT `column1`, `column2` FROM `table` WHERE `id` = 2;
+
+* Rename Table Column
+ALTER TABLE `table` change `cost` `price` double(4,2) UNSIGNED NOT NULL DEFAULT 0 AFTER `column`;
+
+* Change Table to InnoDB
+ALTER TABLE table ENGINE="innodb";
+
+* Reset Mysql User Password
+UPDATE mysql.user SET Password=PASSWORD('new_password') WHERE User='some_user';
+FLUSH PRIVILEGES;
+
+* Add New Column In Specified Place
+ALTER TABLE `table` ADD `column` VARCHAR(200) NOT NULL DEFAULT ” AFTER `column`;
+
+* Export a database to .csv format
+mysqldump -p -u username -T DIRECTORY –fields-enclosed-by=\” –fields-terminated-by=, database > file
+
+* Basics
+DESCRIBE `table`;
+
+SELECT `field` FROM `table` LIMIT 10, 20;
+
+UPDATE `table` SET `field`="value", `field_2`="value_2" WHERE `field`="other_value";
+
+INSERT INTO `table` (`field_1`, `field_2`) VALUES ("value_1", "value_2");
+
+DELETE FROM `table` where `field`="value";
+
+* Debugging
+SHOW TABLE STATUS FROM `database` LIKE "table";
+
+SHOW ENGINE innodb STATUS;
+
+* See Foreign Keys
+show create table `table`;
+
+* A Better Way To Reset Root Password
+/usr/local/mysql/bin/mysqladmin -u root password NEWPASSWORD
+
+* Reset Root Password
+/usr/local/mysql/bin/mysqld_safe --skip-grant-tables
+UPDATE mysql.user SET Password=PASSWORD('NewPassword') WHERE User='root'; FLUSH PRIVILEGES;
