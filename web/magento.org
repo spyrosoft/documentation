@@ -1,0 +1,11 @@
+* Ginormous Tables To Truncate
+truncate table dataflow_batch_export;
+truncate table dataflow_batch_import;
+truncate table log_url;
+truncate table log_url_info;
+truncate table log_visitor;
+truncate table log_visitor_info;
+truncate table report_event;
+
+* Turn on MySQL logging:
+lib/Varien/Db/Adapter/Pdo/Mysql.php
