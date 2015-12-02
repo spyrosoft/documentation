@@ -1,0 +1,16 @@
+* Make changes permanent by editing /etc/X11/xorg.conf.d/50-synaptics.conf
+** Add to the "touchpad catchall" section
+
+* Horizontal Scrolling
+** Test to see if it works:
+synclient HorizTwoFingerScroll=1
+** Make permanent
+Option "HorizTwoFingerScroll" "1"
+
+* Right click on two finger tap
+** Make permanent
+Option "TapButton2" "3"
+
+* Paste on three finger tap
+** Make permanent
+Option "TapButton3" "2"
