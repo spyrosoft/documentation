@@ -4,8 +4,11 @@ gem install shopify_theme
 
 * Configuration
 
-** Off the bat, use the sweet bootstrap command - this provides you with the Timber framework:
-theme bootstrap api_key password store "Theme Name" --version=latest
+** Off the bat, use the sweet bootstrap command - this provides you with the Timber framework
+** Find your api_key here
+	 https://shopify-6-boilerplate.myshopify.com/admin/apps/private
+	 Create a new App if none exist
+theme bootstrap [api key] [password] [store url without http://] "Theme Name" --version=latest
 
 
 * Commands
