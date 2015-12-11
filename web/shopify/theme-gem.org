@@ -8,6 +8,7 @@ gem install shopify_theme
 ** Find your api_key here
 	 https://shopify-6-boilerplate.myshopify.com/admin/apps/private
 	 Create a new App if none exist
+	 Docs: https://github.com/Shopify/shopify_theme
 theme bootstrap [api key] [password] [store url without http://] "Theme Name" --version=latest
 
 
