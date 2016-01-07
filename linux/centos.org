@@ -1,0 +1,7 @@
+* Minimal Installation Connect to the Internet
+ntmi
+enp03
+<Edit...>
+[X] Automatically connect
+<OK>
+ping google.com
