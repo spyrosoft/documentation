@@ -1,5 +1,5 @@
 * Minimal Installation Connect to the Internet
-ntmi
+nmtui
 enp03
 <Edit...>
 [X] Automatically connect
