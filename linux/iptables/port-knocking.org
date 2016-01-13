@@ -24,7 +24,7 @@ iptables-save > /etc/sysconfig/iptables
 iptables-save > /etc/iptables/iptables.rules
 
 * Run the following script to configure iptables (or do it yourself - notice that my settings are different than the documentation's - I need the loopback interface to work)
-https://github.com/spyrosoft/shell-scripts/blob/master/configure-knockknock
+https://github.com/spyrosoft/shell-scripts/blob/master/sysadmin/configure-knockknock
 
 * Enable the daemon on startup (or you will lock yourself out of your server once the knockknock iptables rules are in place), which is oddly nowhere to be found in the documentation
 (systemd: write the following to /etc/systemd/system/knockknock.service)
@@ -68,4 +68,4 @@ service iptables save
 
 Naive Port Knocking
 
-https://github.com/spyrosoft/shell-scripts/blob/master/configure-port-knocking
+https://github.com/spyrosoft/shell-scripts/blob/master/archive/configure-port-knocking
