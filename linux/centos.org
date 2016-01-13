@@ -5,3 +5,13 @@ enp03
 [X] Automatically connect
 <OK>
 ping google.com
+
+* Disable SELinux
+# Switch to root
+su -
+# Edit the SELinux config file
+vi /etc/selinux/config
+# Replace enforcing with disabled
+:s/enforcing/disabled/g
+# Write quit
+:x
