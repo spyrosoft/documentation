@@ -15,3 +15,6 @@ vi /etc/selinux/config
 :s/enforcing/disabled/g
 # Write quit
 :x
+
+* Install EPEL
+yum install epel-release
