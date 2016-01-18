@@ -4,6 +4,8 @@ Source: http://www.thoughtcrime.org/software/knockknock/
 
 * This assumes the use of CentOS on the server
 
+* You may need to yum install pycrypto
+
 * KnockKnock is set up to listen on /var/log/kern.log however I like to log iptables rejects separately
 
 ** Replace '/var/log/kern.log' in knockknock-daemon.py with '/var/log/iptables.log' then run the normal installation
