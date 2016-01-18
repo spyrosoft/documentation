@@ -1,0 +1,12 @@
+[Unit]
+Description=KnockKnock Daemon
+After=syslog.target network.target iptables.service
+
+[Service]
+ExecStart=/usr/bin/knockknock-daemon
+ExecStop=/usr/bin/kallall knockknock-daemon
+Type=forking
+GuessMainPID=no
+
+[Install]
+WantedBy=multi-user.target
