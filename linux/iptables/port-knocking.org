@@ -2,11 +2,13 @@ KnockKnock by Moxie Marlinspike
 
 Source: http://www.thoughtcrime.org/software/knockknock/
 
-* CentOS7 doesn't use kern.log as is expected in knockknock
+* This assumes the use of CentOS on the server
 
-** Change the file name in knockknock to /etc/rsyslog.d/00-iptables.log and run the installation
+* KnockKnock is set up to listen on /var/log/kern.log however I like to log iptables rejects separately
 
-** Place the following in /etc/rsyslog.d/00-iptables.log
+** Replace '/var/log/kern.log' in knockknock-daemon.py with '/var/log/iptables.log' then run the normal installation
+
+** Place the following in /etc/rsyslog.d/00-iptables.conf
 :msg,contains,"REJECT " -/var/log/iptables.log
 
 ** Now restart rsyslog to start using the new settings
@@ -16,40 +18,35 @@ systemctl restart rsyslog.service
 
 * Copy /etc/knockknock.d/profiles/new-profile to your local machine as described in the documentation
 
-* Remove all chains and rules from iptables (TEMPORARILY) and save them, so you can power cycle your server if you get locked out - and save them
+* Remove all chains and rules from iptables (TEMPORARILY) and save them, so you can power cycle your server if you get locked out
 (CentOS)
 service iptables save
-(Other - find where the iptables config file is and write over it with the new rules - here are two examples)
+(General Linux - find where the iptables config file is and write over it with the new rules - two possibilities:)
 iptables-save > /etc/sysconfig/iptables
 iptables-save > /etc/iptables/iptables.rules
 
 * Run the following script to configure iptables (or do it yourself - notice that my settings are different than the documentation's - I need the loopback interface to work)
 https://github.com/spyrosoft/shell-scripts/blob/master/sysadmin/configure-knockknock
 
-* Enable the daemon on startup (or you will lock yourself out of your server once the knockknock iptables rules are in place), which is oddly nowhere to be found in the documentation
-(systemd: write the following to /etc/systemd/system/knockknock.service)
-[Unit]
-Description=Knock Knock Daemon
-After=syslog.target network.target iptables.service
+** DIY Note: The iptables settings will be erased in a moment when we reboot the server, so make sure you save them to a file when you're done with this step
+iptables-save > /root/iptables-settings
 
-[Service]
-ExecStart=/usr/bin/knockknock-daemon
-ExecStop=/usr/bin/kallall knockknock-daemon
-Type=forking
-GuessMainPID=no
+* Oddly, nowhere to be found in the knockknock documentation is the fact that you will lock yourself out of your server once the knockknock iptables rules are in place and you rboot your server
 
-[Install]
-WantedBy=multi-user.target
+** Copy (found in this repository under this same directory) knockknock.service to /etc/systemd/system/
 
-* TEST THIS
+* BE SURE TO TEST THAT THIS IS WORKING
 (server)
 systemctl start knockknock.service
 systemctl status knockknock.service
 (make sure it's running and everything's good)
 (local)
 ssh root@example.com
-(if you can't get in, something is horribly wrong - power cycle your server to get back in and fix it before you continue any farther)
+
+* If you can't get in, something is horribly wrong - fix whatever is wrong with iptables before you continue
+
 (server)
+systemctl enable knockknock.service
 reboot
 (local)
 ssh root@example.com
@@ -58,6 +55,8 @@ systemctl status knockknock.service
 (make sure it's running and everything's good)
 
 * Now that we know that knockknock.service works on boot, run the configure-knockknock script again, and this time save iptables to disk
+(server)
+/root/configure-knockknock
 service iptables save
 (or the other way mentioned above)
 
