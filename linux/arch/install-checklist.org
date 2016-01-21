@@ -10,11 +10,12 @@ YES
 cryptsetup luksOpen /dev/sda1 cryptmap-root
 
 cryptsetup luksFormat /dev/sda2
+
+mkfs.ext4 /dev/mapper/cryptmap-root
 YES
 ***Password***
 cryptsetup luksOpen /dev/sda2 cryptmap-home
 
-mkfs.ext4 /dev/mapper/cryptmap-root
 mkfs.ext4 /dev/mapper/cryptmap-home
 
 mount /dev/mapper/cryptmap-root /mnt
