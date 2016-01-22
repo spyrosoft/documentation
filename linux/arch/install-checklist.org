@@ -1,104 +1,16 @@
-* GParted
-sda1 – 20gb ext4
-sda2 – The rest minus 64mb ext4
-sda3 – 64mb ext4
-
-* Arch Install Disk
-cryptsetup luksFormat /dev/sda1
-YES
-***Password***
-cryptsetup luksOpen /dev/sda1 cryptmap-root
-
-cryptsetup luksFormat /dev/sda2
-
-mkfs.ext4 /dev/mapper/cryptmap-root
-YES
-***Password***
-cryptsetup luksOpen /dev/sda2 cryptmap-home
-
-mkfs.ext4 /dev/mapper/cryptmap-home
-
-mount /dev/mapper/cryptmap-root /mnt
-mkdir /mnt/home
-mount /dev/mapper/cryptmap-home /mnt/home
-mkdir /mnt/boot
-mount /dev/sda3 /mnt/boot
-
-pacstrap -i /mnt base
-^31 (nano) ^49 (vi)
-
-genfstab -U -p /mnt >> /mnt/etc/fstab
-vi /mnt/etc/fstab
-* Make the last field of the root partition 0 1
-
-arch-chroot /mnt /bin/bash
-
-vi /etc/locale.gen
-/en_US.UTF-8 (delete the hash)
-locale-gen
-
-echo LANG=en_US.UTF-8 > /etc/locale.conf
-
-export LANG=en_US.UTF-8
-
-cd /usr/share/kbd/keymaps/i386/dvorak
-cp dvorak.map.gz dvorak-custom.map.gz
-vi dvorak-custom.map.gz
-keycode 58 = Control
-
-vi /etc/vconsole.conf
-KEYMAP=dvorak
-
-ln -s /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
-
-echo ***hostname*** > /etc/hostname
-
-pacman -S wget
-cd /tmp
-* Visit https://www.archlinux.org/mirrorlist/ in a browser (by installing links or on a different computer)
-* Fill out the form and click the submit button. Run a wget on the URL with the get parameters.
-cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.default
-mv /tmp/wget-mirrorlist-filename /etc/pacman.d/mirrorlist
-vi /etc/pacman.d/mirrorlist
-:%s/#S/S/g
-
-pacman -S makepasswd
-
-makepasswd –chars 20 > /root/sda2.key
-
-cryptsetup luksAddKey /dev/sda2 /root/sda2.key
-
-vi /etc/crypttab
-home /dev/sda2 /root/sda2.key
-
-vi /etc/mkinitcpio.conf
-HOOKS=”base udev autodetect modconf block mdadm encrypt filesystems keyboard fsck”
-mkinitcpio -p linux
-
-passwd
-
-pacman -S grub
-grub-install --target=i386-pc --recheck /dev/sda
-vi /etc/default/grub
-GRUB_CMDLINE_LINUX_DEFAULT=”root=/dev/mapper/root cryptdevice=/dev/sda1:root quiet splash”
-grub-mkconfig -o /boot/grub/grub.cfg
-
-cp /etc/iptables/simple_firewall.rules /etc/iptables/iptables.rules
-systemctl enable iptables
-
-vi /etc/systemd/journald.conf
-SystemMaxUse=50M
-SystemMaxFileSize=10M
-
-exit
-
-umount /mnt/boot /mnt/home /mnt
-
-reboot
-
-pacman -S [lots of programs]
-
-pacman -S kde
-1 kde-wallpapers 10 kdeartwork-colorschemes 11 kdeartwork-desktopthemes 13 kdeartwork-iconthemes 15 kdeartwork-styles 18 kdebase-dolphin 20 kdebase-kdialog 28 kdebase-workspace 97 kdegraphics-snapshot 99 kdegraphics-okular 104 kdemultimedia-kmix 120 kdepim-kalarm 127 kdepim-korganizer 232 kdeutils-print-manager
-
+* KDE
+** Depends on xorg server and xinit
 pacman -S xorg-server-utils xorg-xinit
+** For a (more) minimal installation compared with the alternatives
+pacman -S plasma-desktop
+
+* Clementine
+** You will receive a weird error until all (ALL) of the gstreamer packages are installed
+
+* GParted
+** Root partition - /dev/sda1
+*** Needs enough space for all (globally) installed applications
+** User files partition - /dev/sda2
+*** Mounted on /home and should fill rest minus 64M
+** Boot partition - /dev/sda3
+*** Only needs 64M - and most of this will be empty
