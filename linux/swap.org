@@ -1,0 +1,9 @@
+* Create a swap file (1024 * 4096MB = 4194304 block size):
+dd if=/dev/zero of=/etc/swapfile bs=1024 count=4194304
+chmod 0600 /etc/swapfile
+mkswap /etc/swapfile
+swapon /etc/swapfile
+
+* Add the following to /etc/fstab
+# /etc/swapfile
+/etc/swapfile none swap sw 0 0
