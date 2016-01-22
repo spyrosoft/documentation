@@ -7,6 +7,42 @@ pacman -S plasma-desktop
 * Clementine
 ** You will receive a weird error until all (ALL) of the gstreamer packages are installed
 
+* Partitioning:
+
+* fdisk
+fdisk /dev/sda
+# Create a new root partition
+n
+# Default partition type (p)
+<enter>
+# Default partition number (1)
+<enter>
+# Default partition first sector
+<enter>
+# Choose how large the root partition is, for example 20G
++20G
+# Create a new boot partition - out of order to fill the rest up with the home partition
+n
+# Default partition type (p)
+<enter>
+# Partition number
+3
+# Default partition first sector
+<enter>
+# Choose how large the boot partition is, for example 64M
++64M
+# Create a new home partition
+n
+# Default partition number (3)
+<enter>
+# Default partition first sector
+<enter>
+# Default partition last sector
+<enter>
+# Erase whatever is there now and write the new partition table
+w
+
+
 * GParted
 ** Root partition - /dev/sda1
 *** Needs enough space for all (globally) installed applications
