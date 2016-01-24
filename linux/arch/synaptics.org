@@ -1,4 +1,4 @@
-* Make changes permanent by editing /etc/X11/xorg.conf.d/50-synaptics.conf
+* Make changes permanent by editing /usr/share/X11/xorg.conf.d/50-synaptics.conf
 ** Add to the "touchpad catchall" section
 
 * Horizontal Scrolling
