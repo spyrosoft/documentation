@@ -1,0 +1,4 @@
+* Create a certificate and install it manually
+letsencrypt --certonly --email admin@example.com -d example.com -d www.example.com
+** Make sure port 80 and port 443 are unbound (temporarily) - in my case:
+systemctl stop haproxy && letsencrypt --certonly --email admin@example.com -d example.com -d www.example.com; systemctl start haproxy
