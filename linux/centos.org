@@ -18,3 +18,11 @@ vi /etc/selinux/config
 
 * Install EPEL
 yum install epel-release
+
+* Disable firewalld and replace it with iptables
+systemctl stop firewalld
+systemctl mask firewalld
+yum install iptables-services
+systemctl enable iptables
+#Load your custom rules here
+service iptables save
