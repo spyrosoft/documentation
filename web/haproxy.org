@@ -1,2 +1,5 @@
 * Redirect http to https
 redirect scheme https code 301 if { hdr(Host) -i example.com } !{ ssl_fc }
+
+* Disable insecure sslv3 in the global section
+ssl-default-bind-options no-sslv3
