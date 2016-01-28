@@ -1,0 +1,2 @@
+* Creating an https pem file
+cat example.com.crt authority.crt private.key > example.com.pem
