@@ -64,6 +64,10 @@ service iptables save
 
 * Reboot the server and log back in - now you're using knockknock - yay
 
+* If you would like to be able to use knockknock as a non-privileged user
+** Visit the knockknock executable and comment out the 'verifyPermissions()' function call in 'main'
+** Run the following command as root to give non privileged users access to the hping command:
+setcap cap_net_raw+ep /path/to/hping3
 
 
 
