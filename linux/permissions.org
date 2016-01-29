@@ -5,3 +5,6 @@ chattr +a /path/to/file
 * setcap & getcap
 ** Allow users root privileges to specific commands (e.g. setcap for hping)
 setcap cap_net_raw+ep /usr/bin/hping3
+
+** See what existing priveleges exist
+getcap /usr/bin/hping3
