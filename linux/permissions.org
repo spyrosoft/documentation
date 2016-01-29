@@ -1,0 +1,7 @@
+* chattr
+** Set append-only access to a file
+chattr +a /path/to/file
+
+* setcap & getcap
+** Allow users root privileges to specific commands (e.g. setcap for hping)
+setcap cap_net_raw+ep /usr/bin/hping3
