@@ -1,0 +1,4 @@
+* List USB devices
+usb-devices | less
+lsusb -vvv | less
+

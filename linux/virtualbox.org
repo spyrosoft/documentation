@@ -2,3 +2,8 @@
 	su -
 	cd /etc/xdg/autostart
 	mv vboxclient.desktop /root
+
+* Resolution troubles? Create this file and add the following contents: /etc/modules-load.d/virtualbox.conf
+vboxguest
+vboxsf
+vboxvideo
