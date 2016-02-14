@@ -1,0 +1,11 @@
+* Enable sounds for chatrooms
+Buddy List > Tools > Preferences > Sounds > Sound Events > Others talk in chat
+
+* Create a chat for an IRC channel
+Buddy List > Accounts > Manage Accounts > Add > Protocol > IRC
+	Server: irc.example.com
+Add
+Buddy List > Buddies > Add Group
+Right Click on the new Group > Add Chat
+	Choose the IRC Account
+	Channel: #example
