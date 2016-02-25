@@ -1,2 +1,4 @@
 * Creating an https pem file
 cat example.com.crt authority.crt private.key > example.com.pem
+** In the case of Let's Encrypt:
+cat fullchain1.pem privkey1.pem > example.com.pem
