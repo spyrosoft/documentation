@@ -1,5 +1,9 @@
 * How To
 
+** Rank your mirrorlists by speed
+	 Use the built in rankmirrors command - use `rankmirrors -h' for details
+	 Also see github.com/spyrosoft/shell-scripts/sysadmin
+
 ** Install a package from the AUR
 	 Acquire and extract the tarball which contains the PKGBUILD and possibly other required files
 	 Look for a README file in src/ - it may contain further information needed later on
