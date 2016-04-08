@@ -1,0 +1,3 @@
+* Encrypt an existing private key
+openssl rsa -des3 -in unencrypted.key -out encrypted.key
+
