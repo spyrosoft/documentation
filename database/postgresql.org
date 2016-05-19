@@ -6,23 +6,42 @@
 
 
 * PostgreSQL Commands
+	From psql unless specified otherwise
 
 ** Show databases
-	 (psql)
 	 \l
 
 ** Show tables (Show Size and Description with \d+)
-	 (psql)
 	 \d
 
 ** Show columns
-	 (psql)
 	 \d TABLE
 
 ** Describe table
-	 (psql)
 	 \d+ table
+
+** Show roles
+	 \du
 
 ** Create a database
 	 (shell)
 	 createdb DBNAME
+
+** Create new user
+	 (shell)
+	 create_user USERNAME
+
+
+* Installation
+	install postgresql postgresql-server
+	# Postgres will not start unless the database has been initialized
+	postgresql-setup initdb
+	systemctl enable postgresql
+	systemctl start postgresql
+	# Give root postgres admin privileges
+	su postgres
+	createuser --superuser root
+	# Root cannot log in without a database belonging to it
+	createdb root
+	# Back to root
+	logout
