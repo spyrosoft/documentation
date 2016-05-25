@@ -15,7 +15,7 @@
 	 \d
 
 ** Show columns
-	 \d TABLE
+	 \d table
 
 ** Describe table
 	 \d+ table
@@ -24,12 +24,13 @@
 	 \du
 
 ** Create a database
-	 (shell)
+	 CREATE DATABASE example OWNER example_user
+	 Or (shell)
 	 createdb DBNAME
 
 ** Create new user
 	 (shell)
-	 create_user USERNAME
+	 createuser USERNAME
 
 
 * Installation
