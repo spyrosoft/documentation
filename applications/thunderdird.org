@@ -7,3 +7,8 @@
 
 * Open thunderbird profile manager
 	thunderbird -profilemanager
+
+* Rearrange inboxes
+	Note: This didn't exactly work for me. The top inbox refuses to remain in its designated order. But it's closer anyway.
+	Edit > Preferences > Advanced > General > Config Editor
+	"mail.accountmanager.accounts"
