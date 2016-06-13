@@ -1,0 +1,4 @@
+* Redirect non-https traffic to https via .htaccess
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
