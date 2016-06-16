@@ -1,55 +1,63 @@
-* Todo
+* When at the beginning of the last line in a file Ctrl K should treat it like any other line
 
-** M-x customize-browse
+* Identify whether or not packages are lazy loading
+
+* Prevent Emacs from adding deleted text to the clipboard other than C-w & C-k
+
+* Switch C-o to something better and add shift+enter instead
+
+* Assign ',. keys to (better) commands
+
+* M-x customize-browse
 	 Files > Dired
 
-** Find a way to jump to function definition
+* Find a way to jump to function definition
 
-** What major/minor modes did I miss?
+* What major/minor modes did I miss?
 
-** Find !yt videos regarding tags
+* Find !yt videos regarding tags
 
-** Don't forget about Autotyping (Top in Info under Emacs)
+* Don't forget about Autotyping (Top in Info under Emacs)
 
-** Identify how to map hippie expand to tab if the line is already indented
+* Identify how to map hippie expand to tab if the line is already indented
 	 http://www.emacswiki.org/emacs/TabCompletion
 	 http://www.emacswiki.org/emacs/HippieExpand
 	 Set the hippie-expand-try-functions-list variable to something better
 
-** Find !yt video on how to use git vc integration
+* Find !yt video on how to use git vc integration
 
-** Figure out how to make vc filesets
+* Figure out how to make vc filesets
 
-** Find !yt videos regarding the speedbar
+* Find !yt videos regarding the speedbar
 
-** Set up mail to see if it is useful (See 32)
+* Set up mail to see if it is useful (See 32)
 
-** Research recursive editing mode
+* Research recursive editing mode
 
-** Look through the autocomplete extensions for a good one:
+* Look through the autocomplete extensions for a good one:
 	 http://www.emacswiki.org/emacs/AutoComplete
 
-** Find out about emacs package managers
+* Find out about emacs package managers
 
-** Find !yt video or other resource on how to use timeclock
+* Find !yt video or other resource on how to use timeclock
 
-** Map out the combination of all keys and what they do (vanilla emacs) in a table 2 wide x # tall
+* Map out the combination of all keys and what they do (vanilla emacs) in a table 2 wide x # tall
 
-** What commands does C-u affect?
+* What commands does C-u affect?
 
-** Find out what dynamic completion mode is for
+* Find out what dynamic completion mode is for
 
-** Find out what f2 is for
+* Find out what f2 is for
 
-** Figure out how the C-x 6 commands work (two columns e.g. 2C-split)
+* Figure out how the C-x 6 commands work (two columns e.g. 2C-split)
 
-** http://whattheemacsd.com/
+* http://whattheemacsd.com/
 
 
 
 * Hooks to Utilize
 
-** Programming major modes should have the following modes enabled
+* Programming major modes should have the following modes enabled
 	 semantic-mode
 	 electric-layout-mode
 	 rainbow-delimiters
@@ -57,20 +65,19 @@
 
 * Never Mind
 
-** Find a way to make tab autocomplete inline code. It would never make sense for tab to be pressed except at the beginning of the line.
+* Find a way to make tab autocomplete inline code. It would never make sense for tab to be pressed except at the beginning of the line.
 	 M-/ is fine - it's even easier to reach
 
 
-* Done
+* DONE
 
-** C-h b
+* C-h b
 
-** Set M-k to quit emacs and M-q to save and quit
+* Set M-k to quit emacs and M-q to save and quit
 
-** vim/emacs cheat sheet of freezing hell
+* vim/emacs cheat sheet of freezing hell
 
-** Read through the FAQ
+* Read through the FAQ
 
-** Figure out how to prevent the deletion of tabs on lines which only contain tabs
+* Figure out how to prevent the deletion of tabs on lines which only contain tabs
 	 Actually, if you start typing code on the line, it will indent itself properly
-
