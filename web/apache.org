@@ -5,3 +5,9 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 * Turn off directory indexing
 Options -Indexes
+
+* Basic Auth
+AuthUserFile /path/to/htpasswd
+AuthName "Keep Out The Riff Raff"
+AuthType Basic
+require valid-user
