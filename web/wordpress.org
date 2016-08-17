@@ -1,3 +1,27 @@
 * HTTPS Admin Login
-	wp-config.php
-	define('FORCE_SSL_ADMIN', true);
+wp-config.php
+define('FORCE_SSL_ADMIN', true);
+
+* Add Widget area to the theme
+functions.php:
+function YOUR_WIDGET_init() {
+	register_sidebar(
+		array(
+			'name'          => 'NAME OF YOUR WIDGET',
+			'id'            => 'ID_OF_YOUR_WIDGET',
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+}
+add_action( 'widgets_init', 'YOUR_WIDGET_init' );
+
+
+theme-file.php:
+<?php if ( is_active_sidebar( 'ID_OF_YOUR_WIDGET' ) ) : ?>
+<div class="widget-area" role="complementary">
+	<?php dynamic_sidebar( 'ID_OF_YOUR_WIDGET' ); ?>
+</div>
+<?php endif; ?>
