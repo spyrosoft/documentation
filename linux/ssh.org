@@ -8,3 +8,6 @@
 	 -C compresses data
 	 -q surpresses warnings
 	 -N do not execute remote command
+
+** Create a new ssh key
+ssh-keygen -t rsa -b 4096 -C "example@example.com"
