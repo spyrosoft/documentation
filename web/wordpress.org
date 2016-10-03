@@ -25,3 +25,38 @@ theme-file.php:
 	<?php dynamic_sidebar( 'ID_OF_YOUR_WIDGET' ); ?>
 </div>
 <?php endif; ?>
+
+* htaccess
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+# Turn off directory indexing
+Options -Indexes
+
+* Child Theme - style.css
+/*
+Theme Name: Company Child
+Theme URI: http://example.com/
+Template: parent
+Author: Bennett
+Author URI: https://spyrosoft.com/
+Description: Child theme for Company
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: parent
+*/
+
+@import url("/wp-content/themes/parent/style.css");
