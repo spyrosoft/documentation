@@ -26,3 +26,13 @@ yum install iptables-services
 systemctl enable iptables
 #Load your custom rules here
 service iptables save
+
+* Automated updates
+yum install yum-cron
+systemctl enable yum-cron.service
+systemctl start yum-cron.service
+vi /etc/yum/yum-cron.conf
+apply_updates = yes
+random_sleep = 1440
+emit_via = email
+email_to = you@example.com
