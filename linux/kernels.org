@@ -1,0 +1,10 @@
+* Remove old kernels
+
+** CentOS
+#List the installed kernels
+rpm -q kernel
+#Remove the old kernel
+rpm -e kernel-*
+
+** Debian
+aptitude remove linux-image-*
