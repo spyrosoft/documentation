@@ -1,5 +1,8 @@
 * General
 
+** Set the hardware clock to the current system time
+	 hwclock --systohc
+
 ** Sync system time with the world
 	 ntpdate pool.ntp.org
 
