@@ -1,38 +1,37 @@
-* PostgreSQL Commands
-	From psql unless specified otherwise
+* PostgreSQL Commands (From psql unless specified otherwise)
 
 ** Show databases
-	 \l
+\l
 
 ** Show tables (Show Size and Description with \d+)
-	 \dt
+\dt
 
 ** Show roles
-	 \du
+\du
 
 ** Create new user
-	 CREATE USER example_user
+CREATE USER example_user
 
 ** Create a database
-	 CREATE DATABASE example OWNER example_user
+CREATE DATABASE example OWNER example_user
 
 ** Connect to a database
-	 \c DATABASE
+\c DATABASE
 
 ** Execute sql from file
-	 \i /path/to/file
+\i /path/to/file
 
 
 * Installation
-	install postgresql postgresql-server
-	# Postgres will not start unless the database has been initialized
-	postgresql-setup initdb
-	systemctl enable postgresql
-	systemctl start postgresql
-	# Give root postgres admin privileges
-	su postgres
-	createuser --superuser root
-	# Root cannot log in without a database belonging to it
-	createdb root
-	# Back to root
-	logout
+install postgresql postgresql-server
+# Postgres will not start unless the database has been initialized
+postgresql-setup initdb
+systemctl enable postgresql
+systemctl start postgresql
+# Create a history file for the postgres user
+touch ~postgres/.psql_history
+chown postgres:postgres ~postgres/.psql_history
+# Change all values in the METHODS column to: trust
+# This tells postgres to use linux user authentication
+vi ~postgres/data/pg_hba.conf
+su postgres
