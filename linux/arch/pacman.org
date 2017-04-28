@@ -1,62 +1,46 @@
-* How To
+* Rank your mirrorlists by speed
+	Use the built in rankmirrors command - use `rankmirrors -h' for details
+	Also see github.com/spyrosoft/shell-scripts/sysadmin/pacman-generate-fastest-mirrors
 
-** Rank your mirrorlists by speed
-	 Use the built in rankmirrors command - use `rankmirrors -h' for details
-	 Also see github.com/spyrosoft/shell-scripts/sysadmin
+* Install a package from the AUR
+	Acquire and extract the tarball which contains the PKGBUILD and possibly other required files
+	Look for a README file in src/ - it may contain further information needed later on
+cd directory
+makepkg -cs
+pacman -U pkgname-pkgver.pkg.tar.xz
 
-** Install a package from the AUR
-	 Acquire and extract the tarball which contains the PKGBUILD and possibly other required files
-	 Look for a README file in src/ - it may contain further information needed later on
-	 cd directory
-	 makepkg -cs
-	 pacman -U pkgname-pkgver.pkg.tar.xz
+* Clear the pacman cache
+pacman -Sc
 
-** Locate orphaned packages
-	 pacman -Qdt
+* Locate orphaned packages
+pacman -Qdt
 
-** Clear the pacman cache
-	 pacman -Sc
+* List all installed groups
+pacman -Sg
 
+* List all installed packages
+pacman -Qe
 
-* Common Commands
+* Pull list of package updates from the internet and upgrade them
+pacman -Syu
 
-** Remote Package Sync
+* Install specific package(s) from the repositories
+pacman -S [package]
 
-*** pacman -Syu
-	 	Update list of packages that need upgrading and upgrade them
+* Search for package(s) in the repositories
+pacman -Ss
 
-*** pacman -S
-		Install specific package(s) from the repositories
+* Remove the specified package(s), its/their configuration(s) and all unneeded dependencies
+pacman -Rns
 
-*** pacman -Si
-		Display information about a given package in the repositories
+* Display information about a given package in the repositories
+pacman -Si
 
-*** pacman -Ss
-		Search for package(s) in the repositories
+* Search for package(s) in the local database - display their description as well
+pacman -Qs
 
+* List files within the package in the local database
+pacman -Ql
 
-** Local Package Info
-
-*** pacman -Qe
-		List all installed packages
-
-*** pacman -Q
-		Search for package(s) in the local database
-
-*** pacman -Qs
-		Search for package(s) in the local database - display their description as well
-
-*** pacman -Qi
-		Display information about a given package from the local database
-
-*** pacman -Ql
-		List files within the package in the local database
-
-
-** Remove Local Packages
-
-*** pacman -Rns
-		Remove the specified package(s), its/their configuration(s) and all unneeded dependencies
-
-*** pacman -R
-		Remove the specified package(s), retaining its/their configuration(s) and dependencies
+* Remove the specified package(s), retaining its/their configuration(s) and dependencies
+pacman -R
