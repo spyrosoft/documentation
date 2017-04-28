@@ -1,0 +1,5 @@
+* No whitespace around a tag
+%example
+  Things
+  %span>
+  .
