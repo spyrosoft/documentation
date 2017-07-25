@@ -35,3 +35,17 @@ chown postgres:postgres ~postgres/.psql_history
 # This tells postgres to use linux user authentication
 vi ~postgres/data/pg_hba.conf
 su postgres
+
+* Grant root read-only permissions
+CREATE USER root;
+GRANT USAGE ON SCHEMA public TO root;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO root;
+# Repeat the following for each database:
+# Search-Replace 'example_database'
+GRANT CONNECT ON DATABASE example_database TO root;
+\c example_database
+# The following grants privileges on new tables generated in new database "example_database"
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO root;
+GRANT USAGE ON SCHEMA public TO root;
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO root;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO root;
