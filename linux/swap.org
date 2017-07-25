@@ -5,5 +5,7 @@ mkswap /etc/swapfile
 swapon /etc/swapfile
 
 * Add the following to /etc/fstab
-# /etc/swapfile
 /etc/swapfile none swap sw 0 0
+
+* Check for swapfile
+swapon -s
