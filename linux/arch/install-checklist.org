@@ -1,6 +1,6 @@
 * KDE
 ** Depends on xorg server and xinit
-pacman -S xorg-server-utils xorg-xinit xorg-server
+pacman -S xorg-apps xorg-xinit xorg-server
 ** For a (more) minimal installation compared with the alternatives
 pacman -S plasma-desktop
 
