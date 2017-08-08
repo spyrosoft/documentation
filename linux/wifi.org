@@ -1,0 +1,2 @@
+* Analyze Surrounding Networks
+nmcli d wifi
