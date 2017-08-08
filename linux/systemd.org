@@ -1,0 +1,14 @@
+* Server Services
+
+[Unit]
+Description=Web server for example.com
+After=syslog.target network.target example.service
+
+[Service]
+ExecStart=/bin/sudo -u exampleuser /bin/screen -dmS exampleuser zsh -c "cd ~/example.com; ./example.com; exec zsh"
+ExecStop=/bin/sudo -u exampleuser /bin/screen -X -S exampleuser
+Type=forking
+GuessMainPID=no
+
+[Install]
+WantedBy=multi-user.target
